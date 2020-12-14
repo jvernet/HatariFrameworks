@@ -1,0 +1,63 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/jeromevernet/Downloads/portmidi/build/Release/portmidi.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "pminternal.h",
+          'external-contents': "/Users/jeromevernet/Downloads/portmidi/pm_common/pminternal.h"
+        },
+        {
+          'type': 'file',
+          'name': "pmmac.h",
+          'external-contents': "/Users/jeromevernet/Downloads/portmidi/pm_mac/pmmac.h"
+        },
+        {
+          'type': 'file',
+          'name': "pmmacosxcm.h",
+          'external-contents': "/Users/jeromevernet/Downloads/portmidi/pm_mac/pmmacosxcm.h"
+        },
+        {
+          'type': 'file',
+          'name': "pmutil.h",
+          'external-contents': "/Users/jeromevernet/Downloads/portmidi/pm_common/pmutil.h"
+        },
+        {
+          'type': 'file',
+          'name': "portmidi-Swift.h",
+          'external-contents': "/Users/jeromevernet/Downloads/portmidi/build/Release/portmidi.framework/Versions/A/Headers/portmidi-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "portmidi.h",
+          'external-contents': "/Users/jeromevernet/Downloads/portmidi/pm_common/portmidi.h"
+        },
+        {
+          'type': 'file',
+          'name': "porttime.h",
+          'external-contents': "/Users/jeromevernet/Downloads/portmidi/porttime/porttime.h"
+        },
+        {
+          'type': 'file',
+          'name': "readbinaryplist.h",
+          'external-contents': "/Users/jeromevernet/Downloads/portmidi/pm_mac/readbinaryplist.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jeromevernet/Downloads/portmidi/build/Release/portmidi.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jeromevernet/Downloads/portmidi/build/portmidi.build/Release/portmidi.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

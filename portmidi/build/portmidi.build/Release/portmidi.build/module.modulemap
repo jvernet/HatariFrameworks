@@ -1,0 +1,6 @@
+framework module portmidi {
+  umbrella header "portmidi.h"
+
+  export *
+  module * { export * }
+}
