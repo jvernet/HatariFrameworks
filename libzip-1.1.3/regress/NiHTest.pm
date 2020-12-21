@@ -8,10 +8,12 @@ use File::Copy;
 use File::Path qw(mkpath remove_tree);
 use Getopt::Long qw(:config posix_default bundling no_ignore_case);
 use IPC::Open3;
+#use IPC::Cmd qw(run);
+use Storable qw(dclone);
 use Symbol 'gensym';
 use UNIVERSAL;
 
-use Data::Dumper qw(Dumper);
+#use Data::Dumper qw(Dumper);
 
 #  NiHTest -- package to run regression tests
 #  Copyright (C) 2002-2016 Dieter Baron and Thomas Klausner
@@ -77,8 +79,8 @@ use Data::Dumper qw(Dumper);
 #	mkdir MODE NAME
 #	    create directory NAME with permissions MODE.
 #
-#	pipein COMMAND ARGS ...
-#	    pipe output of running COMMAND to program's stdin.
+#   precheck COMMAND ARGS ...
+#		if COMMAND exits with non-zero status, skip test.
 #
 #	preload LIBRARY
 #	    pre-load LIBRARY before running program.
@@ -99,6 +101,12 @@ use Data::Dumper qw(Dumper);
 #
 #       stderr-replace REGEX REPLACEMENT
 #           run regex replacement over expected and got stderr output.
+#
+#	stdin TEST
+#	    Provide TEXT to program's stdin.
+#
+#	stdin-file FILE
+#	    pipe FILE to program's stdin.
 #
 #	stdout TEXT
 #	    program is expected to print TEXT to stdout.  If multiple
@@ -133,15 +141,17 @@ my %EXIT_CODES = (
 	ERROR => 99
     );
 
+# MARK: - Public API
+
 sub new {
 	my $class = UNIVERSAL::isa ($_[0], __PACKAGE__) ? shift : __PACKAGE__;
 	my $self = bless {}, $class;
-	
+
 	my ($opts) = @_;
 
 	$self->{default_program} = $opts->{default_program};
 	$self->{zipcmp} = $opts->{zipcmp} // 'zipcmp';
-	$self->{zipcmp_flags} = $opts->{zipcmp_flags};
+	$self->{zipcmp_flags} = $opts->{zipcmp_flags} // '-p';
 
 	$self->{directives} = {
 		args => { type => 'string...', once => 1, required => 1 },
@@ -151,33 +161,29 @@ sub new {
 		'file-del' => { type => 'string string' },
 		'file-new' => { type => 'string string' },
 		mkdir => { type => 'string string' },
-		pipein => { type => 'string', once => 1 },
+		precheck => { type => 'string...' },
 		preload => { type => 'string', once => 1 },
 		program => { type => 'string', once => 1 },
 		'return' => { type => 'int', once => 1, required => 1 },
 		setenv => { type => 'string string' },
 		stderr => { type => 'string' },
 		'stderr-replace' => { type => 'string string' },
+		stdin => { type => 'string' },
+		'stdin-file' => { type => 'string', once => 1 },
 		stdout => { type => 'string' },
 		touch => { type => 'int string' },
 		ulimit => { type => 'char string' }
 	};
-	
+
 	$self->{compare_by_type} = {};
 	$self->{copy_by_type} = {};
 	$self->{hooks} = {};
 
-	$self->add_comparator('zip/zip', \&comparator_zip);
-	
-	$self->{srcdir} = $opts->{srcdir} // $ENV{srcdir};
-	
-	if (!defined($self->{srcdir}) || $self->{srcdir} eq '') {
-		$self->{srcdir} = `sed -n 's/^srcdir = \(.*\)/\1/p' Makefile`;
-		chomp($self->{srcdir});
-	}
-	
+	$self->get_variable('srcdir', $opts);
+	$self->get_variable('top_builddir', $opts);
+
 	$self->{in_sandbox} = 0;
-	
+
 	$self->{verbose} = $ENV{VERBOSE};
 	$self->{keep_broken} = $ENV{KEEP_BROKEN};
 	$self->{no_cleanup} = $ENV{NO_CLEANUP};
@@ -189,7 +195,7 @@ sub new {
 
 sub add_comparator {
 	my ($self, $ext, $sub) = @_;
-	
+
 	return $self->add_file_proc('compare_by_type', $ext, $sub);
 }
 
@@ -203,15 +209,15 @@ sub add_copier {
 
 sub add_directive {
 	my ($self, $name, $def) = @_;
-	
+
 	if (exists($self->{directives}->{$name})) {
 		$self->die("directive $name already defined");
 	}
-	
+
 	# TODO: validate $def
-	
+
 	$self->{directives}->{$name} = $def;
-	
+
 	return 1;
 }
 
@@ -228,9 +234,28 @@ sub add_file_proc {
 
 sub add_hook {
 	my ($self, $hook, $sub) = @_;
-	
+
 	$self->{hooks}->{$hook} = [] unless (defined($self->{hooks}->{$hook}));
 	push @{$self->{hooks}->{$hook}}, $sub;
+
+	return 1;
+}
+
+
+sub add_variant {
+	my ($self, $name, $hooks) = @_;
+
+	if (!defined($self->{variants})) {
+		$self->{variants} = [];
+		$self->add_directive('variants' => { type => 'string...', once => 1 });
+	}
+	for my $variant (@{$self->{variants}}) {
+		if ($variant->{name} eq $name) {
+			$self->die("variant $name already defined");
+		}
+	}
+
+	push @{$self->{variants}}, { name => $name, hooks => $hooks };
 
 	return 1;
 }
@@ -261,13 +286,45 @@ sub run {
 
 
 sub runtest {
+	my ($self) = @_;
+
+	if (defined($self->{variants})) {
+		my @results = ();
+		$self->{original_test} = $self->{test};
+
+		my %variants;
+
+		if (defined($self->{test}->{variants})) {
+			%variants = map { $_ => 1; } @{$self->{test}->{variants}};
+		}
+
+		for my $variant (@{$self->{variants}}) {
+			next if (defined($self->{test}->{variants}) && !exists($variants{$variant->{name}}));
+
+			$self->{variant_hooks} = $variant->{hooks};
+			$self->{test} = dclone($self->{original_test});
+			$self->{variant} = $variant->{name};
+			$self->mangle_test_for_variant();
+			push @results, $self->runtest_one($variant->{name});
+		}
+
+		return @results;
+	}
+	else {
+		return $self->runtest_one();
+	}
+}
+
+
+sub runtest_one {
 	my ($self, $tag) = @_;
 
 	$ENV{TZ} = "UTC";
 	$ENV{LC_CTYPE} = "C";
+	$ENV{POSIXLY_CORRECT} = 1;
 	$self->sandbox_create($tag);
 	$self->sandbox_enter();
-	
+
 	my $ok = 1;
 	$ok &= $self->copy_files();
 	$ok &= $self->run_hook('post_copy_files');
@@ -283,8 +340,16 @@ sub runtest {
 	for my $env (@{$self->{test}->{'setenv'}}) {
 		$ENV{$env->[0]} = $env->[1];
 	}
+        my $preload_env_var = 'LD_PRELOAD';
+        if ($^O eq 'darwin') {
+                $preload_env_var = 'DYLD_INSERT_LIBRARIES';
+        }
 	if (defined($self->{test}->{'preload'})) {
-		$ENV{LD_PRELOAD} = cwd() . "/../.libs/$self->{test}->{'preload'}";
+		if (-f cwd() . "/../.libs/$self->{test}->{'preload'}") {
+			$ENV{$preload_env_var} = cwd() . "/../.libs/$self->{test}->{'preload'}";
+		} else {
+			$ENV{$preload_env_var} = cwd() . "/../lib$self->{test}->{'preload'}";
+		}
 	}
 
 	$self->run_program();
@@ -293,7 +358,11 @@ sub runtest {
 		delete ${ENV{$env->[0]}};
 	}
 	if (defined($self->{test}->{'preload'})) {
-		delete ${ENV{LD_PRELOAD}};
+		delete ${ENV{$preload_env_var}};
+	}
+
+	if ($self->{test}->{stdin}) {
+		$self->{stdin} = [ @{$self->{test}->{stdin}} ];
 	}
 
 	if ($self->{test}->{stdout}) {
@@ -312,7 +381,7 @@ sub runtest {
 	$self->run_hook('post_run_program');
 
 	my @failed = ();
-	
+
 	if ($self->{exit_status} != ($self->{test}->{return} // 0)) {
 		push @failed, 'exit status';
 		if ($self->{verbose}) {
@@ -320,7 +389,7 @@ sub runtest {
 			print "-" . ($self->{test}->{return} // 0) . "\n+$self->{exit_status}\n";
 		}
 	}
-	
+
 	if (!$self->compare_arrays($self->{expected_stdout}, $self->{stdout}, 'output')) {
 		push @failed, 'output';
 	}
@@ -330,11 +399,11 @@ sub runtest {
 	if (!$self->compare_files()) {
 		push @failed, 'files';
 	}
-	
+
 	$self->{failed} = \@failed;
-	
+
 	$self->run_hook('checks');
-	
+
 	my $result = scalar(@{$self->{failed}}) == 0 ? 'PASS' : 'FAIL';
 
 	$self->sandbox_leave();
@@ -355,7 +424,8 @@ sub setup {
 	@ARGV = @argv;
 	my $ok = GetOptions(
 		'help|h' => \my $help,
-		'keep-broken' => \$self->{keep_broken},
+	        'bin-sub-directory=s' => \$self->{bin_sub_directory},
+		'keep-broken|k' => \$self->{keep_broken},
 		'no-cleanup' => \$self->{no_cleanup},
 		# 'run-gdb' => \$self->{run_gdb},
 		'setup-only' => \$self->{setup_only},
@@ -365,7 +435,7 @@ sub setup {
 	@ARGV = @save_argv;
 
 	if (!$ok || scalar(@argv) != 1 || $help) {
-		print STDERR "Usage: $0 [-hv] [--keep-broken] [--no-cleanup] [--setup-only] testcase\n";
+		print STDERR "Usage: $0 [-hv] [--bin-sub-directory DIR] [--keep-broken] [--no-cleanup] [--setup-only] testcase\n";
 		exit(1);
 	}
 
@@ -374,43 +444,70 @@ sub setup {
 	$testcase .= '.test' unless ($testcase =~ m/\.test$/);
 
 	my $testcase_file = $self->find_file($testcase);
-	
+
 	$self->die("cannot find test case $testcase") unless ($testcase_file);
-	
+
 	$testcase =~ s,^(?:.*/)?([^/]*)\.test$,$1,;
 	$self->{testname} = $testcase;
 
 	$self->die("error in test case definition") unless $self->parse_case($testcase_file);
-	
-	$self->check_features_requirement() if ($self->{test}->{features});
 
-	$self->end_test('SKIP') if ($self->{test}->{preload} && $^O eq 'darwin');
+	$self->check_features_requirement() if ($self->{test}->{features});
+	$self->run_precheck() if ($self->{test}->{precheck});
+
+	$self->end_test('SKIP') if ($self->{test}->{preload} && ($^O eq 'darwin' || $^O eq 'MSWin32'));
+	$self->end_test('SKIP') if (($self->{test}->{stdin} || $self->{test}->{'stdin-file'}) && $^O eq 'MSWin32');
 }
 
 
-#
-# internal methods
-#
+# MARK: - Internal Methods
 
 sub add_file {
 	my ($self, $file) = @_;
-	
+
 	if (defined($self->{files}->{$file->{destination}})) {
 		$self->warn("duplicate specification for input file $file->{destination}");
 		return undef;
 	}
-        
+
 	$self->{files}->{$file->{destination}} = $file;
-	
+
 	return 1;
 }
 
 
 sub check_features_requirement() {
 	my ($self) = @_;
-	
-	### TODO: implement
-	
+
+	my %features;
+
+	my $fh;
+	unless (open($fh, '<', "$self->{top_builddir}/config.h")) {
+		$self->die("cannot open config.h in top builddir $self->{top_builddir}");
+	}
+	while (my $line = <$fh>) {
+		if ($line =~ m/^#define HAVE_([A-Z0-9_a-z]*)/) {
+			$features{$1} = 1;
+		}
+	}
+	close($fh);
+
+	my @missing = ();
+	for my $feature (@{$self->{test}->{features}}) {
+		if (!$features{$feature}) {
+			push @missing, $feature;
+		}
+	}
+
+	if (scalar @missing > 0) {
+		my $reason = "missing features";
+		if (scalar(@missing) == 1) {
+			$reason = "missing feature";
+		}
+		$self->print_test_result('SKIP', "$reason: " . (join ' ', @missing));
+		$self->end_test('SKIP');
+	}
+
 	return 1;
 }
 
@@ -418,21 +515,22 @@ sub check_features_requirement() {
 sub comparator_zip {
 	my ($self, $got, $expected) = @_;
 
-	my @args = ($self->{zipcmp}, $self->{verbose} ? '-pv' : '-pq');
+	my $zipcmp = (-f $self->{zipcmp}) ? $self->{zipcmp} : $self->find_program('zipcmp');
+	my @args = ($zipcmp, $self->{verbose} ? '-v' : '-q');
 	push @args, $self->{zipcmp_flags} if ($self->{zipcmp_flags});
 	push @args, ($expected, $got);
-        
+
 	my $ret = system(@args);
-	
+
 	return $ret == 0;
 }
 
 
 sub compare_arrays() {
 	my ($self, $a, $b, $tag) = @_;
-	
+
 	my $ok = 1;
-	
+
 	if (scalar(@$a) != scalar(@$b)) {
 		$ok = 0;
 	}
@@ -444,14 +542,14 @@ sub compare_arrays() {
 			}
 		}
 	}
-	
+
 	if (!$ok && $self->{verbose}) {
 		print "Unexpected $tag:\n";
 		print "--- expected\n+++ got\n";
 
 		diff_arrays($a, $b);
 	}
-	
+
 	return $ok;
 }
 
@@ -476,7 +574,7 @@ sub file_cmp($$) {
 
 sub compare_file($$$) {
 	my ($self, $got, $expected) = @_;
-	
+
 	my $real_expected = $self->find_file($expected);
 	unless ($real_expected) {
 		$self->warn("cannot find expected result file $expected");
@@ -499,22 +597,48 @@ sub compare_file($$$) {
 	return $ok;
 }
 
+sub list_files {
+	my ($root) = @_;
+        my $ls;
+
+	my @files = ();
+	my @dirs = ($root);
+
+	while (scalar(@dirs) > 0) {
+		my $dir = shift @dirs;
+
+		opendir($ls, $dir);
+		unless ($ls) {
+			# TODO: handle error
+		}
+		while (my $entry = readdir($ls)) {
+			my $file = "$dir/$entry";
+			if ($dir eq '.') {
+				$file = $entry;
+			}
+
+			if (-f $file) {
+				push @files, "$file";
+			}
+			if (-d $file && $entry ne '.' && $entry ne '..') {
+				push @dirs, "$file";
+			}
+		}
+		closedir($ls);
+	}
+
+	return @files;
+}
 
 sub compare_files() {
 	my ($self) = @_;
-	
-	my $ok = 1;
-	
-	opendir(my $ls, '.');
-	unless ($ls) {
-		# TODO: handle error
-	}
-	my @files_got = grep { -f } readdir($ls);
-	closedir($ls);
 
-	@files_got = sort @files_got;
+	my $ok = 1;
+
+
+	my @files_got = sort(list_files("."));
 	my @files_should = ();
-	
+
         for my $file (sort keys %{$self->{files}}) {
 		push @files_should, $file if ($self->{files}->{$file}->{result} || $self->{files}->{$file}->{ignore});
 	}
@@ -525,25 +649,25 @@ sub compare_files() {
 	unless ($self->run_hook('post_list_files')) {
 		return 0;
 	}
-	
+
 	$ok = $self->compare_arrays($self->{files_should}, $self->{files_got}, 'files');
-	
+
 	for my $file (@{$self->{files_got}}) {
 		my $file_def = $self->{files}->{$file};
 		next unless ($file_def && $file_def->{result});
-		
+
 		$ok &= $self->compare_file($file, $file_def->{result});
 	}
-	
+
 	return $ok;
 }
 
 
 sub copy_files {
 	my ($self) = @_;
-	
+
 	my $ok = 1;
-	
+
 	for my $filename (sort keys %{$self->{files}}) {
 		my $file = $self->{files}->{$filename};
 		next unless ($file->{source});
@@ -586,25 +710,25 @@ sub copy_files {
 			}
 		}
 	}
-	
+
 	$self->die("failed to copy input files") unless ($ok);
 }
 
 
 sub die() {
 	my ($self, $msg) = @_;
-	
+
 	print STDERR "$0: $msg\n" if ($msg);
-	
+
 	$self->end_test('ERROR');
 }
 
 
 sub end_test {
 	my ($self, $status) = @_;
-	
+
 	my $exit_code = $EXIT_CODES{$status} // $EXIT_CODES{ERROR};
-	
+
 	$self->exit($exit_code);
 }
 
@@ -613,21 +737,21 @@ sub end_test {
 sub exit() {
 	my ($self, $status) = @_;
 	### TODO: cleanup
-	
+
 	exit($status);
 }
 
 
 sub find_file() {
 	my ($self, $fname) = @_;
-	
+
 	for my $dir (('', "$self->{srcdir}/")) {
 		my $f = "$dir$fname";
-		$f = "../$f" if ($self->{in_sandbox} && $dir !~ m,^/,);
-		
+		$f = "../$f" if ($self->{in_sandbox} && $dir !~ m,^(\w:)?/,);
+
 		return $f if (-f $f);
 	}
-	
+
 	return undef;
 }
 
@@ -646,6 +770,40 @@ sub get_extension {
 	return $ext;
 }
 
+
+sub get_variable {
+	my ($self, $name, $opts) = @_;
+
+	$self->{$name} = $opts->{$name} // $ENV{$name};
+	if (!defined($self->{$name}) || $self->{$name} eq '') {
+		my $fh;
+		unless (open($fh, '<', 'Makefile')) {
+			$self->die("cannot open Makefile: $!");
+		}
+		while (my $line = <$fh>) {
+			chomp $line;
+			if ($line =~ m/^$name = (.*)/) {
+				$self->{$name} = $1;
+				last;
+			}
+		}
+		close ($fh);
+	}
+	if (!defined($self->{$name}) || $self->{$name} eq '') {
+		$self->die("cannot get variable $name");
+	}
+}
+
+
+sub mangle_test_for_variant {
+	my ($self) = @_;
+
+	$self->{test}->{stdout} = $self->strip_tags($self->{variant}, $self->{test}->{stdout});
+	$self->{test}->{stderr} = $self->strip_tags($self->{variant}, $self->{test}->{stderr});
+	$self->run_hook('mangle_test');
+
+	return 1;
+}
 
 sub parse_args {
 	my ($self, $type, $str) = @_;
@@ -699,16 +857,16 @@ sub parse_args {
 			$self->warn_file_line("expected $expected arguments, got " . (scalar(@strs)));
 			return undef;
 		}
-		
+
 		my $args = [];
-		
+
 		my $n = scalar(@types);
 		for (my $i=0; $i<scalar(@strs); $i++) {
 			my $val = $self->parse_args(($i >= $n ? $types[$n-1] : $types[$i]), $strs[$i]);
 			return undef unless (defined($val));
 			push @$args, $val;
 		}
-		
+
 		return $args;
 	}
 	else {
@@ -739,42 +897,42 @@ sub parse_args {
 
 sub parse_case() {
 	my ($self, $fname) = @_;
-	
+
 	my $ok = 1;
-	
+
 	open TST, "< $fname" or $self->die("cannot open test case $fname: $!");
-	
+
 	$self->{testcase_fname} = $fname;
-	
+
 	my %test = ();
-	
+
 	while (my $line = <TST>) {
-		chomp $line;
-		
+		$line =~ s/(\n|\r)//g;
+
 		next if ($line =~ m/^\#/);
-		
+
 		unless ($line =~ m/(\S*)(?:\s(.*))?/) {
 			$self->warn_file_line("cannot parse line $line");
 			$ok = 0;
 			next;
 		}
 		my ($cmd, $argstring) = ($1, $2//"");
-		
+
 		my $def = $self->{directives}->{$cmd};
-		
+
 		unless ($def) {
 			$self->warn_file_line("unknown directive $cmd in test file");
 			$ok = 0;
 			next;
 		}
-		
+
 		my $args = $self->parse_args($def->{type}, $argstring);
-            
+
 		unless (defined($args)) {
 			$ok = 0;
 			next;
 		}
-		
+
 		if ($def->{once}) {
 			if (defined($test{$cmd})) {
 				$self->warn_file_line("directive $cmd appeared twice in test file");
@@ -788,16 +946,39 @@ sub parse_case() {
 	}
 
 	close TST;
-	
+
 	return undef unless ($ok);
-	
+
 	for my $cmd (sort keys %test) {
 		if ($self->{directives}->{$cmd}->{required} && !defined($test{$cmd})) {
 			$self->warn_file("required directive $cmd missing in test file");
 			$ok = 0;
 		}
 	}
-	
+
+	if ($test{'stdin-file'} && $test{stdin}) {
+		$self->warn_file("both stdin-file and stdin provided, choose one");
+		$ok = 0;
+	}
+
+	if (defined($self->{variants})) {
+		if (defined($test{variants})) {
+			for my $name (@{$test{variants}}) {
+				my $found = 0;
+				for my $variant (@{$self->{variants}}) {
+					if ($name eq $variant->{name}) {
+						$found = 1;
+						last;
+					}
+				}
+				if ($found == 0) {
+					$self->warn_file("unknown variant $name");
+					$ok = 0;
+				}
+			}
+		}
+	}
+
 	return undef unless ($ok);
 
 	if (defined($test{'stderr-replace'}) && defined($test{stderr})) {
@@ -811,7 +992,7 @@ sub parse_case() {
 	$self->{test} = \%test;
 
 	$self->run_hook('mangle_program');
-	
+
 	if (!$self->parse_postprocess_files()) {
 		return 0;
 	}
@@ -822,23 +1003,23 @@ sub parse_case() {
 
 sub parse_postprocess_files {
 	my ($self) = @_;
-	
+
 	$self->{files} = {};
-	
+
 	my $ok = 1;
-	
+
 	for my $file (@{$self->{test}->{file}}) {
 		$ok = 0 unless ($self->add_file({ source => $file->[1], destination => $file->[0], result => $file->[2] }));
 	}
-	
+
 	for my $file (@{$self->{test}->{'file-del'}}) {
 		$ok = 0 unless ($self->add_file({ source => $file->[1], destination => $file->[0], result => undef }));
 	}
-	
+
 	for my $file (@{$self->{test}->{'file-new'}}) {
 		$ok = 0 unless ($self->add_file({ source => undef, destination => $file->[0], result => $file->[1] }));
 	}
-	
+
 	return $ok;
 }
 
@@ -875,6 +1056,14 @@ sub run_file_proc {
 
 	my $ext = ($self->get_extension($got)) . '/' . ($self->get_extension($expected));
 
+	if ($self->{variant}) {
+		if (defined($self->{$proc}->{"$self->{variant}/$ext"})) {
+			for my $sub (@{$self->{$proc}->{"$self->{variant}/$ext"}}) {
+				my $ret = $sub->($self, $got, $expected);
+				return $ret if (defined($ret));
+			}
+		}
+	}
 	if (defined($self->{$proc}->{$ext})) {
 		for my $sub (@{$self->{$proc}->{$ext}}) {
 			my $ret = $sub->($self, $got, $expected);
@@ -888,23 +1077,30 @@ sub run_file_proc {
 
 sub run_hook {
 	my ($self, $hook) = @_;
-	
+
 	my $ok = 1;
-	
+
+	my @hooks = ();
+
+	if (defined($self->{variant_hooks}) && defined($self->{variant_hooks}->{$hook})) {
+		push @hooks, $self->{variant_hooks}->{$hook};
+	}
 	if (defined($self->{hooks}->{$hook})) {
-		for my $sub (@{$self->{hooks}->{$hook}}) {
-			unless ($sub->($self, $hook)) {
-				$self->warn("hook $hook failed");
-				$ok = 0;
-			}
+		push @hooks, @{$self->{hooks}->{$hook}};
+	}
+
+	for my $sub (@hooks) {
+		unless ($sub->($self, $hook, $self->{variant})) {
+			$self->warn("hook $hook failed");
+			$ok = 0;
 		}
 	}
-	
+
 	return $ok;
 }
+
+
 sub args_decode {
-
-
 	my ($str, $srcdir) = @_;
 
 	if ($str =~ m/\\/) {
@@ -932,133 +1128,125 @@ sub args_decode {
 }
 
 
+sub run_precheck {
+	my ($self) = @_;
+
+	for my $precheck (@{$self->{test}->{precheck}}) {
+		unless (system(@{$precheck}) == 0) {
+			$self->print_test_result('SKIP', "precheck failed");
+			$self->end_test('SKIP');
+		}
+	}
+
+	return 1;
+}
+
+
+sub find_program() {
+        my ($self, $pname) = @_;
+
+	my @directories = (".");
+	if ($self->{bin_sub_directory}) {
+	        push @directories, $self->{bin_sub_directory};
+	}
+
+	for my $up (('.', '..', '../..', '../../..')) {
+		for my $sub (('.', 'src')) {
+		        for my $dir (@directories) {
+				for my $ext (('', '.exe')) {
+					my $f = "$up/$sub/$dir/$pname$ext";
+					return $f if (-f $f);
+				}
+			}
+		}
+	}
+
+	return undef;
+}
+
+
 sub run_program {
 	my ($self) = @_;
-	goto &pipein_win32 if $^O eq 'MSWin32' && $self->{test}->{pipein};
 	my ($stdin, $stdout, $stderr);
 	$stderr = gensym;
 
-	my @cmd = ('../' . $self->{test}->{program}, map ({ args_decode($_, $self->{srcdir}); } @{$self->{test}->{args}}));
+	my @cmd = ($self->find_program($self->{test}->{program}), map ({ args_decode($_, $self->{srcdir}); } @{$self->{test}->{args}}));
 
 	### TODO: catch errors?
-	
-	my $pid = open3($stdin, $stdout, $stderr, @cmd);
-	
+
+	my $pid;
+        if ($self->{test}->{'stdin-file'}) {
+                open(SPLAT, '<', $self->{test}->{'stdin-file'});
+	        my $is_marked = eof SPLAT; # mark used
+		$pid = open3("<&SPLAT", $stdout, $stderr, @cmd);
+	}
+	else {
+		$pid = open3($stdin, $stdout, $stderr, @cmd);
+	}
 	$self->{stdout} = [];
 	$self->{stderr} = [];
-        
-        if ($self->{test}->{pipein}) {
-                my $fh;
-                open($fh, "$self->{test}->{pipein} |");
-                if (!defined($fh)) {
-                        $self->die("cannot run pipein command [$self->{test}->{pipein}: $!");
+
+	if ($self->{test}->{stdin}) {
+		foreach my $line (@{$self->{test}->{stdin}}) {
+                        print $stdin $line . "\n";
                 }
-                while (my $line = <$fh>) {
-                        print $stdin $line;
-                }
-                close($fh);
                 close($stdin);
         }
-	
+
 	while (my $line = <$stdout>) {
-		if ($^O eq 'MSWin32') {
-			$line =~ s/[\r\n]+$//;
-		}
-		else {
-			chomp $line;
-		}
+		$line =~ s/(\n|\r)//g;
 		push @{$self->{stdout}}, $line;
 	}
 	my $prg = $self->{test}->{program};
 	$prg =~ s,.*/,,;
 	while (my $line = <$stderr>) {
-		if ($^O eq 'MSWin32') {
-			$line =~ s/[\r\n]+$//;
-		}
-		else {
-			chomp $line;
-		}
-
-		$line =~ s/^[^: ]*$prg: //;
+		$line =~ s/(\n|\r)//g;
+		$line =~ s/^[^: ]*$prg(\.exe)?: //;
 		if (defined($self->{test}->{'stderr-replace'})) {
 			$line = $self->stderr_rewrite($self->{test}->{'stderr-replace'}, $line);
 		}
 		push @{$self->{stderr}}, $line;
 	}
-	
+
 	waitpid($pid, 0);
-	
+
 	$self->{exit_status} = $? >> 8;
-}
-
-sub pipein_win32() {
-	my ($self) = @_;
-
-	my $cmd = "$self->{test}->{pipein}| ..\\$self->{test}->{program} " . join(' ', map ({ args_decode($_, $self->{srcdir}); } @{$self->{test}->{args}}));
-	my ($success, $error_message, $full_buf, $stdout_buf, $stderr_buf) = IPC::Cmd::run(command => $cmd);
-	if (!$success) {
-		### TODO: catch errors?
-	}
-
-	my @stdout = map { s/[\r\n]+$// } @$stdout_buf;
-	$self->{stdout} = \@stdout;
-        $self->{stderr} = [];
-
-	my $prg = $self->{test}->{program};
-	$prg =~ s,.*/,,;
-	foreach my $line (@$stderr_buf) {
-		$line =~ s/[\r\n]+$//;
-
-		$line =~ s/^[^: ]*$prg: //;
-		if (defined($self->{test}->{'stderr-replace'})) {
-			$line = $self->stderr_rewrite($self->{test}->{'stderr-replace'}, $line);
-		}
-		push @{$self->{stderr}}, $line;
-	}
-
-	$self->{exit_status} = 1;
-	if ($success) {
-		$self->{exit_status} = 0;
-	}
-	elsif ($error_message =~ /exited with value ([0-9]+)$/) {
-		$self->{exit_status} = $1 + 0;
-	}
 }
 
 sub sandbox_create {
 	my ($self, $tag) = @_;
-	
+
 	$tag = ($tag ? "-$tag" : "");
 	$self->{sandbox_dir} = "sandbox-$self->{testname}$tag.d$$";
-	
+
 	$self->die("sandbox $self->{sandbox_dir} already exists") if (-e $self->{sandbox_dir});
-	
+
 	mkdir($self->{sandbox_dir}) or $self->die("cannot create sandbox $self->{sandbox_dir}: $!");
-	
+
 	return 1;
 }
 
 
 sub sandbox_enter {
 	my ($self) = @_;
-	
+
 	$self->die("internal error: cannot enter sandbox before creating it") unless (defined($self->{sandbox_dir}));
 
 	return if ($self->{in_sandbox});
 
-	chdir($self->{sandbox_dir}) or $self->die("cant cd into sandbox $self->{sandbox_dir}: $!");
-	
+	chdir($self->{sandbox_dir}) or $self->die("cannot cd into sandbox $self->{sandbox_dir}: $!");
+
 	$self->{in_sandbox} = 1;
 }
 
 
 sub sandbox_leave {
 	my ($self) = @_;
-	
+
 	return if (!$self->{in_sandbox});
-	
+
 	chdir('..') or $self->die("cannot leave sandbox: $!");
-	
+
 	$self->{in_sandbox} = 0;
 }
 
@@ -1066,22 +1254,41 @@ sub sandbox_leave {
 sub sandbox_remove {
 	my ($self) = @_;
 
-	my $ok = 1;
 	remove_tree($self->{sandbox_dir});
 
-	return $ok;
+	return 1;
+}
+
+
+sub strip_tags {
+	my ($self, $tag, $lines) = @_;
+
+	my @stripped = ();
+
+	for my $line (@$lines) {
+		if ($line =~ m/^<([a-zA-Z0-9_]*)> (.*)/) {
+			if ($1 eq $tag) {
+				push @stripped, $2;
+			}
+		}
+		else {
+			push @stripped, $line;
+		}
+	}
+
+	return \@stripped;
 }
 
 
 sub touch_files {
 	my ($self) = @_;
-	
+
 	my $ok = 1;
-	
+
 	if (defined($self->{test}->{touch})) {
 		for my $args (@{$self->{test}->{touch}}) {
 			my ($mtime, $fname) = @$args;
-			
+
 			if (!-f $fname) {
 				my $fh;
 				unless (open($fh, "> $fname") and close($fh)) {
@@ -1096,28 +1303,28 @@ sub touch_files {
 			}
 		}
 	}
-	
+
 	return $ok;
 }
 
 
 sub warn {
 	my ($self, $msg) = @_;
-	
+
 	print STDERR "$0: $msg\n";
 }
 
 
 sub warn_file {
 	my ($self, $msg) = @_;
-	
+
 	$self->warn("$self->{testcase_fname}: $msg");
 }
 
 
 sub warn_file_line {
 	my ($self, $msg) = @_;
-	
+
 	$self->warn("$self->{testcase_fname}:$.: $msg");
 }
 
@@ -1191,7 +1398,7 @@ sub find_best_offsets {
 	if (!defined($best_a)) {
 		return (scalar(@$a) - $i, scalar(@$b) - $j);
 	}
-	
+
 	return ($best_a, $best_b);
 }
 

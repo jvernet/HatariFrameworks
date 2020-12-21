@@ -1,13 +1,3 @@
-# API Plans
-
-## Encryption
-
-````c
-struct zip *zip_open_encrypted(const char *path, int flags, const char *password, int *errorp);
-int zip_set_encryption(struct zip *archive, zip_uint64_t idx, zip_uint16_t method, const char *password);
-void zip_set_archive_encryption(struct zip *archive, zip_uint16_t method, const char *password);
-````
-
 ## Prefixes
 
 For example for adding extractors for self-extracting zip archives.
@@ -16,30 +6,27 @@ zip_set_archive_prefix(struct zip *za, const zip_uint8_t *data, zip_uint64_t len
 const zip_uint8_t *zip_get_archive_prefix(struct zip *za, zip_uint64_t *lengthp);
 ````
 
-## Progress Callback
+## Compression
 
-Register callback; will be called from `zip_close()` after each file has been processed.
+* add lzma support
+* add deflate64 support (https://github.com/madler/zlib/blob/master/contrib/infback9/infback9.h)
 
-````c
-typedef void (*zip_progress_callback_t)(double);
-void zip_register_progress_callback(zip_t *, zip_progress_callback_t);
-````
-
-# API Issues
+## API Issues
 
 * `zip_get_archive_comment` has `int *lenp` argument.  Cleaner would be `zip_uint32_t *`.
   rename and fix.  which other functions for naming consistency?
 * rename remaining `zip_XXX_{file,archive}_*` to `zip_{file,archive}_XXX_*`?
 * compression/crypt implementations: how to set error code on failure
 * compression/crypt error messages a la `ZIP_ER_ZLIB` (no detailed info passing)
-* check arguments for every entry point into libzip
 
-# Features
+## Features
 
-* support setting extra fields from zip_source
+* add seek support for AES-encrypted files
+* consistently use `_zip_crypto_clear()` for passwords
+* support setting extra fields from `zip_source`
   * introduce layers of extra fields:
     * original
-    * from zip_source
+    * from `zip_source`
     * manually set
   * when querying extra fields, search all of them in reverse order
   * add whiteout (deleted) flag
@@ -49,58 +36,90 @@ void zip_register_progress_callback(zip_t *, zip_progress_callback_t);
 * delete all extra fields during `zip_replace()`
 * function to copy file from one archive to another
 * set `O_CLOEXEC` flag after fopen and mkstemp
-* add append-only mode writing file to disk incrementally to keep memory usage low
 * `zip_file_set_mtime()`: support InfoZIP time stamps
-
 * support streaming output (creating new archive to e.g. stdout)
-* add functions to:
-  * read/set ASCII file flag? (more general options?)
+* add function to read/set ASCII file flag
 * `zip_commit()` (to finish changes without closing archive)
 * add custom compression function support
-* `zip_fseek()`
 * `zip_source_zip()`: allow rewinding
-* zipcmp: add option for file content comparison
-* zipcmp: compare bit flags if paranoid
-* zipcmp: compare external attributes/opsys if paranoid
-* zipcmp: compare last_mod if paranoid (or with separate flag?)
-* consistency
-  . for stored files, test compressed = uncompressed
-  . data descriptor
-  . local headers come before central dir
+* `zipcmp`: add option for file content comparison
+* `zipcmp`: add more paranoid checks:
+  * external attributes/opsys
+  * last_mod
+  * version needed/made by
+  * general purpose bit flags
+* add more consistency checks:
+  * for stored files, test compressed = uncompressed
+  * data descriptor
+  * local headers come before central dir
+* support for old compression methods?
 
-* support for old compression methods?????
+## Bugs
 
-# Bugs
-
-* support InfoZIP encryption header extension (copy data descriptor for encrypted files)
 * ensure that nentries is small enough not to cause overflow (size_t for entry, uint64 for CD on disk)
-* fix OpenSUSE i686 regression failures
 * check for limits imposed by format (central dir size, file size, extra fields, ...)
 * `_zip_u2d_time()`: handle `localtime(3)` failure
 * POSIX: `zip_open()`: check whether file can be created and fail if not
 * fix inconsistent usage of valid flags (not checked in many places)
 * `cdr == NULL` -> `ER_NOENT` vs. `idx > cdir->nentry` -> `ER_INVAL` inconsistent (still there?)
 
+## Cleanup
 
-# Cleanup
-
+* go over cdir parser and rename various offset/size variables to make it clearer
 * use bool
 * use `ZIP_SOURCE_SUPPORTS_{READABLE,SEEKABLE,WRITABLE}`
 * use `zip_source_seek_compute_offset()`
-* move compat refs from `zipint.h` to own file, and include that in `zipint.h` and `src`
 * get rid of `zip_get_{compression,encryption}_implementation()`
 * use `zip_*int*_t` internally
+* `zip_source_file()`: don't allow write if start/len specify a part of the file
 
-# Analysis
+## Documentation
 
-* pass through coverity
+* document: `zip_source_write()`: length can't be > `ZIP_INT64_MAX`
+* document: `ZIP_SOURCE_CLOSE` implementation can't return error
+* keep error codes in man pages in sync
+* document error codes in new man pages
 
-# Infrastructure
+## Infrastructure
 
-* create CMakefile.txt man page linking from links file
+* review guidelines/community standards
+  - [Linux Foundation Core Infrastructure Initiative Best Practices](https://bestpractices.coreinfrastructure.org/)
+  - [Readme Maturity Level](https://github.com/LappleApple/feedmereadmes/blob/master/README-maturity-model.md)
+  - [Github Community Profile](https://github.com/nih-at/libzip/community)
+* test different crypto backends with TravisCI.
+* improve man page formatting of tagged lists on webpage (`<dl>`)
+* rewrite `make_zip_errors.sh` in cmake
+* script to check if all exported symbols are marked with `ZIP_EXTERN`, add to `make distcheck`
 
-# Test Case Issues
+## macOS / iOS framework
 
+* get cmake to optionally build frameworks
+
+## Test Case Issues
+
+* test error cases with special source
+  - tell it which command should fail
+  - use it both as source for `zip_add` and `zip_open_from_source`
+  - `ziptool_regress`:
+    - `-e error_spec`: source containing zip fails depending on `error_spec`
+    - `add_with_error name content error_spec`: add content to archive, where source fails depending on `error_spec`
+    - `add_file_with_error name file_to_add offset len error_spec`: add file to archive, len bytes starting from offset, where source fails depending on `error_spec`
+  - `error_spec`:
+    - source command that fails
+	- error code that source returns
+	- conditions that must be met for error to trigger
+	  - Nth call of command
+      - read/write: total byte count so far
+	  - state of source (opened, EOF reached, ...)
+* test for zipcmp reading directory (requires fts)
+* add test case for clone with files > 4k
+* consider testing for malloc/realloc failures
+* Winzip AES support
+  * test cases decryption: <=20, >20, stat for both
+  * test cases encryption: no password, default password, file-specific password, 128/192/256, <=20, >20
+  * support testing on macOS
+* add test cases for lots of files (including too many)
+* add test cases for holes (between files, between files and cdir, between cdir and eocd, + zip64 where appropriate)
 * unchange on added file
 * test seek in `zip_source_crc()`
 * test cases for `set_extra*`, `delete_extra*`, `*extra_field*`
@@ -110,16 +129,14 @@ void zip_register_progress_callback(zip_t *, zip_progress_callback_t);
   * delete all
   * modify
 * use gcov output to increase test coverage
-* merge most tools into ziptool
 * add test case to change values for newly added files (name, compression method, comment, mtime, . . .)
 * `zip_open()` file less than `EOCDLEN` bytes long
 * test calls against old API
-* run regression tests also from CMake framework
 * rename file to dir/ and vice versa (fails)
 * fix comment test to be newline insensitive
 * check if http://bugs.python.org/issue20078 provides ideas for new tests
 
-* (add, replace)
+* (`add`, `replace`)
   * add to empty zip
   * add to existing zip
   * add w/ existing file name [E]
@@ -127,42 +144,30 @@ void zip_register_progress_callback(zip_t *, zip_progress_callback_t);
   * replace w/ illegal index [E]
   * replace w/ deleted name [E]
   * unchange added/replaced file
-* (close)
+* (`close`)
   * copy zip file
   * open copy
   * rename, delete, replace, add w/ new name, add w/ deleted name
   * close
   * zipcmp copy expected
   * remove copy
-* (error_get)
-* (error_get_sys_type)
-* (error_to_str)
-* (extra_fields)
-* (file_error_get)
-* (file_strerror)
-* (replace)
-* (source_buffer)
-* (source_file)
-* (source_filep)
-* (source_free)
-* (source_function)
-* (source_zip)
-* (strerror)
-* (unchange)
-* (unchange_all)
-* open(ZIP_RDONLY)
+* (`error_get)
+* (`error_get_sys_type`)
+* (`error_to_str`)
+* (`extra_fields`)
+* (`file_error_get`)
+* (`file_strerror`)
+* (`replace`)
+* (`source_buffer`)
+* (`source_file`)
+* (`source_filep`)
+* (`source_free`)
+* (`source_function`)
+* (`source_zip`)
+* (`strerror`)
+* (`unchange`)
+* (`unchange_all`)
+* `open(ZIP_RDONLY)`
 * I/O abstraction layer
-  * zip_open_from_source
+  * `zip_open_from_source`
 * read two zip entries interleaved
-
-# Unsorted
-
-* `zip_source_file()`: don't allow write if start/len specify a part of the file
-* script to check if all exported symbols are marked with `ZIP_EXTERN`, add to make distcheck
-
-* re-implement fix for OS X sandboxing (`zip_archive_set_tempdir()`).
-
-* document: `zip_source_write()`: length can't be > `ZIP_INT64_MAX`
-* document: `ZIP_SOURCE_CLOSE` implementation can't return error
-* keep error codes in man pages in sync
-* document error codes in new man pages

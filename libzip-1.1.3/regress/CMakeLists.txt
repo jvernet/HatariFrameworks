@@ -1,28 +1,82 @@
-ENABLE_TESTING()
+check_function_exists(getopt HAVE_GETOPT)
 
-CHECK_FUNCTION_EXISTS(getopt HAVE_GETOPT)
-IF(NOT HAVE_GETOPT)
-  SET(SRC_EXTRA_FILES ../src/getopt.c)
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}/../src)
-ENDIF(NOT HAVE_GETOPT)
-
-SET(STANDALONE_TEST_PROGRAMS
+set(TEST_PROGRAMS
   add_from_filep
+  can_clone_file
   fopen_unchanged
-#  fread
+  fseek
+  fuzz_main
+  nonrandomopentest
 )
 
-SET(HELPER_TEST_PROGRAMS
-#  tryopen
-)
-
-SET(GETOPT_USERS
+set(GETOPT_USERS
   fread
   tryopen
 )
 
-SET(EXTRA_TESTS
+set(HOLE_USERS
+  hole
+  ziptool_regress
+)
+
+set(ZIP_PROGRAMS ${TEST_PROGRAMS} ${GETOPT_USERS} ${HOLE_USERS})
+
+foreach(PROGRAM IN LISTS ZIP_PROGRAMS)
+  add_executable(${PROGRAM} ${PROGRAM}.c)
+  target_include_directories(${PROGRAM} PRIVATE BEFORE ${PROJECT_SOURCE_DIR}/lib ${PROJECT_BINARY_DIR})
+  target_link_libraries(${PROGRAM} zip)
+endforeach()
+
+# both programs using source_hole.c also use getopt
+if(NOT HAVE_GETOPT)
+  foreach(PROGRAM IN LISTS GETOPT_USERS HOLE_USERS)
+    target_sources(${PROGRAM} PRIVATE ../src/getopt.c)
+    target_include_directories(${PROGRAM} PRIVATE BEFORE ${PROJECT_SOURCE_DIR}/src)
+  endforeach()
+endif(NOT HAVE_GETOPT)
+
+foreach(PROGRAM IN LISTS HOLE_USERS)
+  target_sources(${PROGRAM} PRIVATE source_hole.c)
+endforeach()
+
+# for including ziptool.c
+target_include_directories(ziptool_regress PRIVATE BEFORE ${PROJECT_SOURCE_DIR}/src)
+
+set(DL_USERS
+  # malloc
+  nonrandomopen
+)
+
+foreach(PROGRAM IN LISTS DL_USERS)
+  add_library(${PROGRAM} MODULE ${PROGRAM}.c)
+  target_link_libraries(${PROGRAM} ${CMAKE_DL_LIBS})
+  target_include_directories(${PROGRAM} PRIVATE BEFORE ${PROJECT_SOURCE_DIR}/lib ${PROJECT_BINARY_DIR})
+endforeach()
+
+add_custom_target(cleanup
+    COMMAND ${CMAKE_COMMAND} -DDIR=${PROJECT_BINARY_DIR}/regress -P ${PROJECT_SOURCE_DIR}/regress/cleanup.cmake
+    )
+
+add_custom_target(testinput
+  ALL
+  VERBATIM
+  COMMAND ${CMAKE_COMMAND} -E tar x ${PROJECT_SOURCE_DIR}/regress/manyfiles-zip.zip
+  COMMAND ${CMAKE_COMMAND} -E tar x ${PROJECT_SOURCE_DIR}/regress/bigzero-zip.zip
+  DEPENDS ${PROJECT_SOURCE_DIR}/regress/manyfiles-zip.zip ${PROJECT_SOURCE_DIR}/regress/bigzero-zip.zip
+)
+
+set_property(DIRECTORY PROPERTY ADDITIONAL_MAKE_CLEAN_FILES
+  bigzero.zip
+  manyfiles-133000.zip
+  manyfiles-65536.zip
+  manyfiles-fewer.zip
+  manyfiles-more.zip
+  manyfiles-zip64-modulo.zip
+  manyfiles-zip64.zip
+  manyfiles.zip
+)
+
+set(EXTRA_TESTS
 	add_dir.test
 	add_from_buffer.test
 	add_from_file.test
@@ -32,14 +86,33 @@ SET(EXTRA_TESTS
 	add_from_stdin.test
 	add_from_zip_closed.test
 	add_from_zip_deflated.test
+	add_from_zip_deflated2.test
 	add_from_zip_partial_deflated.test
 	add_from_zip_partial_stored.test
 	add_from_zip_stored.test
 	add_stored.test
 	add_stored_in_memory.test
+	buffer-fragment-read.test
+	buffer-fragment-write.test
+	cancel_45.test
+	cancel_90.test
+	clone-buffer-add.test
+	clone-buffer-delete.test
+	clone-buffer-replace.test
+	clone-fs-add.test
+	clone-fs-delete.test
+	clone-fs-replace.test
+	cm-default.test
 	count_entries.test
-	decrypt-correct-password.test
-	decrypt-wrong-password.test
+	decrypt-correct-password-aes128.test
+	decrypt-correct-password-aes192.test
+	decrypt-correct-password-aes256.test
+	decrypt-correct-password-pkware.test
+	decrypt-no-password-aes256.test
+	decrypt-wrong-password-aes128.test
+	decrypt-wrong-password-aes192.test
+	decrypt-wrong-password-aes256.test
+	decrypt-wrong-password-pkware.test
 	delete_add_same.test
 	delete_invalid.test
 	delete_last.test
@@ -47,6 +120,11 @@ SET(EXTRA_TESTS
 	delete_multiple_partial.test
 	delete_renamed_rename.test
 	encrypt.test
+	encryption-nonrandom-aes128.test
+	encryption-nonrandom-aes192.test
+	encryption-nonrandom-aes256.test
+	encryption-nonrandom-pkware.test
+	encryption-remove.test
 	extra_add.test
 	extra_add_multiple.test
 	extra_count.test
@@ -60,17 +138,29 @@ SET(EXTRA_TESTS
 	extra_set.test
 	extra_set_modify_c.test
 	extra_set_modify_l.test
+	fdopen_ok.test
 	file_comment_encmismatch.test
 	fopen_unchanged.test
 	fread.test
+	fseek_deflated.test
+	fseek_fail.test
+	fseek_ok.test
 	get_comment.test
+	junk_at_end.test
+	junk_at_start.test
 	name_locate.test
 	open_cons_extrabytes.test
 	open_empty.test
 	open_empty_2.test
 	open_extrabytes.test
+	open_file_count.test
+	open_filename_duplicate.test
+	open_filename_duplicate_consistency.test
+	open_filename_duplicate_empty.test
+	open_filename_duplicate_empty_consistency.test
 	open_filename_empty.test
 	open_incons.test
+	open_many_fail.test
 	open_many_ok.test
 	open_multidisk.test
 	open_new_but_exists.test
@@ -82,6 +172,8 @@ SET(EXTRA_TESTS
 	open_truncate.test
 	open_zip64_3mf.test
 	open_zip64_ok.test
+	preload.test
+	progress.test
 	rename_ascii.test
 	rename_cp437.test
 	rename_deleted.test
@@ -93,11 +185,17 @@ SET(EXTRA_TESTS
 	set_comment_localonly.test
 	set_comment_removeglobal.test
 	set_comment_revert.test
+	set_compression_bzip2_to_deflate.test
+	set_compression_deflate_to_bzip2.test
 	set_compression_deflate_to_deflate.test
 	set_compression_deflate_to_store.test
+	set_compression_store_to_bzip2.test
 	set_compression_store_to_deflate.test
 	set_compression_store_to_store.test
+	set_compression_store_to_xz.test
 	set_compression_unknown.test
+	set_compression_xz_to_store.test
+	set_file_dostime.test
 	stat_index_cp437_guess.test
 	stat_index_cp437_raw.test
 	stat_index_cp437_strict.test
@@ -110,33 +208,24 @@ SET(EXTRA_TESTS
 	stat_index_utf8_unmarked_strict.test
 	stat_index_zip64.test
 	utf-8-standardization.test
+	zip-in-archive-comment.test
 	zip64_creation.test
 	zip64_stored_creation.test
 )
 
-SET(ENV{srcdir} ${CMAKE_CURRENT_SOURCE_DIR})
-FOREACH(PROGRAM ${STANDALONE_TEST_PROGRAMS})
-  ADD_EXECUTABLE(${PROGRAM} ${PROGRAM}.c)
-  TARGET_LINK_LIBRARIES(${PROGRAM} zip)
-  ADD_TEST(${PROGRAM} ${CMAKE_CURRENT_SOURCE_DIR}/runtest ${CMAKE_CURRENT_SOURCE_DIR}/${PROGRAM})
-ENDFOREACH(PROGRAM ${STANDALONE_TEST_PROGRAMS})
 
-FOREACH(PROGRAM ${HELPER_TEST_PROGRAMS})
-  ADD_EXECUTABLE(${PROGRAM} ${PROGRAM}.c)
-  TARGET_LINK_LIBRARIES(${PROGRAM} zip)
-ENDFOREACH(PROGRAM ${HELPER_TEST_PROGRAMS})
+set(path "$<TARGET_FILE_DIR:zip>;$ENV{PATH}")
+if (TARGET zlib)
+  set(path "$<TARGET_FILE_DIR:zlib>;${path}")
+endif()
+string(REPLACE ";" "\\;" path "${path}")
 
-FOREACH(PROGRAM ${GETOPT_USERS})
-  ADD_EXECUTABLE(${PROGRAM} ${PROGRAM}.c ${SRC_EXTRA_FILES})
-  TARGET_LINK_LIBRARIES(${PROGRAM} zip)
-ENDFOREACH(PROGRAM ${GETOPT_USERS})
+set(ENV{srcdir} ${PROJECT_SOURCE_DIR}/regress)
 
-ADD_TEST(fread ${CMAKE_CURRENT_SOURCE_DIR}/runtest ${CMAKE_CURRENT_SOURCE_DIR}/fread)
+foreach(CASE IN LISTS EXTRA_TESTS)
+  add_test(NAME ${CASE} COMMAND ${PERL_EXECUTABLE} ${PROJECT_BINARY_DIR}/regress/runtest --bin-sub-directory $<CONFIG> ${PROJECT_SOURCE_DIR}/regress/${CASE})
+  set_tests_properties(${CASE} PROPERTIES SKIP_RETURN_CODE 77)
+  set_tests_properties(${CASE} PROPERTIES ENVIRONMENT "PATH=${path}")
+endforeach()
 
-FOREACH(CASE ${EXTRA_TESTS})
-  ADD_TEST(${CASE} ${CMAKE_CURRENT_SOURCE_DIR}/runtest ${CMAKE_CURRENT_SOURCE_DIR}/${CASE})
-ENDFOREACH(CASE ${EXTRA_TESTS})
-
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../lib
-	${CMAKE_CURRENT_SOURCE_DIR}/../src
-	${CMAKE_CURRENT_BINARY_DIR}/..)
+add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND})

@@ -1,0 +1,1013 @@
+Determining if the function _close exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_40030 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_40030 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/Objects-normal/x86_64/cmTC_40030.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_close -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_40030 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/Objects-normal/x86_64/cmTC_40030.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/Objects-normal/x86_64/cmTC_40030_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_40030.build/Objects-normal/x86_64/cmTC_40030_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_40030
+Undefined symbols for architecture x86_64:
+  "__close", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_40030 normal x86_64
+(1 failure)
+
+
+
+Determining if the function _dup exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_e0571 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_e0571 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/Objects-normal/x86_64/cmTC_e0571.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_dup -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_e0571 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/Objects-normal/x86_64/cmTC_e0571.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/Objects-normal/x86_64/cmTC_e0571_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e0571.build/Objects-normal/x86_64/cmTC_e0571_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_e0571
+Undefined symbols for architecture x86_64:
+  "__dup", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_e0571 normal x86_64
+(1 failure)
+
+
+
+Determining if the function _fdopen exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_85b07 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_85b07 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/Objects-normal/x86_64/cmTC_85b07.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_fdopen -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_85b07 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/Objects-normal/x86_64/cmTC_85b07.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/Objects-normal/x86_64/cmTC_85b07_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_85b07.build/Objects-normal/x86_64/cmTC_85b07_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_85b07
+Undefined symbols for architecture x86_64:
+  "__fdopen", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_85b07 normal x86_64
+(1 failure)
+
+
+
+Determining if the function _fileno exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_ff0e5 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_ff0e5 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/Objects-normal/x86_64/cmTC_ff0e5.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_fileno -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_ff0e5 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/Objects-normal/x86_64/cmTC_ff0e5.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/Objects-normal/x86_64/cmTC_ff0e5_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff0e5.build/Objects-normal/x86_64/cmTC_ff0e5_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_ff0e5
+Undefined symbols for architecture x86_64:
+  "__fileno", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_ff0e5 normal x86_64
+(1 failure)
+
+
+
+Determining if the function _setmode exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_74a96 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_74a96 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/Objects-normal/x86_64/cmTC_74a96.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_setmode -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_74a96 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/Objects-normal/x86_64/cmTC_74a96.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/Objects-normal/x86_64/cmTC_74a96_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74a96.build/Objects-normal/x86_64/cmTC_74a96_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_74a96
+Undefined symbols for architecture x86_64:
+  "__setmode", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_74a96 normal x86_64
+(1 failure)
+
+
+
+Determining if the function _snprintf exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_1c3d0 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_1c3d0 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/Objects-normal/x86_64/cmTC_1c3d0.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_snprintf -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_1c3d0 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/Objects-normal/x86_64/cmTC_1c3d0.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/Objects-normal/x86_64/cmTC_1c3d0_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c3d0.build/Objects-normal/x86_64/cmTC_1c3d0_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_1c3d0
+Undefined symbols for architecture x86_64:
+  "__snprintf", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_1c3d0 normal x86_64
+(1 failure)
+
+
+
+Determining if the function _strdup exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_74ba4 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_74ba4 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/Objects-normal/x86_64/cmTC_74ba4.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_strdup -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_74ba4 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/Objects-normal/x86_64/cmTC_74ba4.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/Objects-normal/x86_64/cmTC_74ba4_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_74ba4.build/Objects-normal/x86_64/cmTC_74ba4_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_74ba4
+Undefined symbols for architecture x86_64:
+  "__strdup", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_74ba4 normal x86_64
+(1 failure)
+
+
+
+Determining if the function _stricmp exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_ab8ff -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_ab8ff OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/Objects-normal/x86_64/cmTC_ab8ff.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_stricmp -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_ab8ff normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/Objects-normal/x86_64/cmTC_ab8ff.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/Objects-normal/x86_64/cmTC_ab8ff_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ab8ff.build/Objects-normal/x86_64/cmTC_ab8ff_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_ab8ff
+Undefined symbols for architecture x86_64:
+  "__stricmp", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_ab8ff normal x86_64
+(1 failure)
+
+
+
+Determining if the function _strtoi64 exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_9ec8e -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_9ec8e OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/Objects-normal/x86_64/cmTC_9ec8e.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_strtoi64 -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_9ec8e normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/Objects-normal/x86_64/cmTC_9ec8e.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/Objects-normal/x86_64/cmTC_9ec8e_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_9ec8e.build/Objects-normal/x86_64/cmTC_9ec8e_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_9ec8e
+Undefined symbols for architecture x86_64:
+  "__strtoi64", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_9ec8e normal x86_64
+(1 failure)
+
+
+
+Determining if the function _strtoui64 exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_f07fe -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_f07fe OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/Objects-normal/x86_64/cmTC_f07fe.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_strtoui64 -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_f07fe normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/Objects-normal/x86_64/cmTC_f07fe.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/Objects-normal/x86_64/cmTC_f07fe_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f07fe.build/Objects-normal/x86_64/cmTC_f07fe_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_f07fe
+Undefined symbols for architecture x86_64:
+  "__strtoui64", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_f07fe normal x86_64
+(1 failure)
+
+
+
+Determining if the function _unlink exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_53ecb -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_53ecb OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/Objects-normal/x86_64/cmTC_53ecb.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=_unlink -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_53ecb normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/Objects-normal/x86_64/cmTC_53ecb.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/Objects-normal/x86_64/cmTC_53ecb_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_53ecb.build/Objects-normal/x86_64/cmTC_53ecb_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_53ecb
+Undefined symbols for architecture x86_64:
+  "__unlink", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_53ecb normal x86_64
+(1 failure)
+
+
+
+Determining if the function explicit_bzero exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_6e2b3 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_6e2b3 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/Objects-normal/x86_64/cmTC_6e2b3.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=explicit_bzero -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_6e2b3 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/Objects-normal/x86_64/cmTC_6e2b3.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/Objects-normal/x86_64/cmTC_6e2b3_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6e2b3.build/Objects-normal/x86_64/cmTC_6e2b3_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_6e2b3
+Undefined symbols for architecture x86_64:
+  "_explicit_bzero", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_6e2b3 normal x86_64
+(1 failure)
+
+
+
+Determining if the function explicit_memset exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_8b139 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_8b139 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/Objects-normal/x86_64/cmTC_8b139.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=explicit_memset -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_8b139 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/Objects-normal/x86_64/cmTC_8b139.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/Objects-normal/x86_64/cmTC_8b139_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b139.build/Objects-normal/x86_64/cmTC_8b139_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_8b139
+Undefined symbols for architecture x86_64:
+  "_explicit_memset", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_8b139 normal x86_64
+(1 failure)
+
+
+
+Determining if the function stricmp exists failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_dff81 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_dff81 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/Objects-normal/x86_64/cmTC_dff81.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DCHECK_FUNCTION_EXISTS=stricmp -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.18/Modules/CheckFunctionExists.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_dff81 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/Objects-normal/x86_64/cmTC_dff81.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/Objects-normal/x86_64/cmTC_dff81_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_dff81.build/Objects-normal/x86_64/cmTC_dff81_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_dff81
+Undefined symbols for architecture x86_64:
+  "_stricmp", referenced from:
+      _main in CheckFunctionExists.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_dff81 normal x86_64
+(1 failure)
+
+
+
+Determining size of __int8 failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_96fda -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_96fda OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/cmTC_96fda.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/__INT8_LIBZIP.o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/__INT8_LIBZIP.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/__INT8_LIBZIP.dia -c /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/__INT8_LIBZIP.o
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:29:12: error: use of undeclared identifier '__int8'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int8))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:30:12: error: use of undeclared identifier '__int8'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int8))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:31:12: error: use of undeclared identifier '__int8'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int8))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:32:12: error: use of undeclared identifier '__int8'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int8))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:33:12: error: use of undeclared identifier '__int8'
+  ('0' +  (SIZE    % 10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int8))
+                     ^
+5 errors generated.
+
+Ld Debug/cmTC_96fda normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/cmTC_96fda.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/cmTC_96fda_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/cmTC_96fda_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_96fda
+ld: file not found: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/__INT8_LIBZIP.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_96fda.build/Objects-normal/x86_64/__INT8_LIBZIP.o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+	Ld Debug/cmTC_96fda normal x86_64
+(2 failures)
+
+
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__int8))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int16 failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_48903 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_48903 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/cmTC_48903.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/__INT16_LIBZIP.o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/__INT16_LIBZIP.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/__INT16_LIBZIP.dia -c /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/__INT16_LIBZIP.o
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:29:12: error: use of undeclared identifier '__int16'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int16))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:30:12: error: use of undeclared identifier '__int16'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int16))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:31:12: error: use of undeclared identifier '__int16'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int16))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:32:12: error: use of undeclared identifier '__int16'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int16))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:33:12: error: use of undeclared identifier '__int16'
+  ('0' +  (SIZE    % 10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int16))
+                     ^
+5 errors generated.
+
+Ld Debug/cmTC_48903 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/cmTC_48903.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/cmTC_48903_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/cmTC_48903_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_48903
+ld: file not found: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/__INT16_LIBZIP.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_48903.build/Objects-normal/x86_64/__INT16_LIBZIP.o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+	Ld Debug/cmTC_48903 normal x86_64
+(2 failures)
+
+
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__int16))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int32 failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_3591d -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_3591d OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/cmTC_3591d.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/__INT32_LIBZIP.o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/__INT32_LIBZIP.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/__INT32_LIBZIP.dia -c /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/__INT32_LIBZIP.o
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:29:12: error: use of undeclared identifier '__int32'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int32))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:30:12: error: use of undeclared identifier '__int32'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int32))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:31:12: error: use of undeclared identifier '__int32'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int32))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:32:12: error: use of undeclared identifier '__int32'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int32))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:33:12: error: use of undeclared identifier '__int32'
+  ('0' +  (SIZE    % 10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int32))
+                     ^
+5 errors generated.
+
+Ld Debug/cmTC_3591d normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/cmTC_3591d.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/cmTC_3591d_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/cmTC_3591d_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_3591d
+ld: file not found: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/__INT32_LIBZIP.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_3591d.build/Objects-normal/x86_64/__INT32_LIBZIP.o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+	Ld Debug/cmTC_3591d normal x86_64
+(2 failures)
+
+
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__int32))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int64 failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_707a1 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_707a1 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/cmTC_707a1.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/__INT64_LIBZIP.o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/__INT64_LIBZIP.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/__INT64_LIBZIP.dia -c /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/__INT64_LIBZIP.o
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:29:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:30:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:31:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:32:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:33:12: error: use of undeclared identifier '__int64'
+  ('0' +  (SIZE    % 10)),
+           ^
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+5 errors generated.
+
+Ld Debug/cmTC_707a1 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/cmTC_707a1.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/cmTC_707a1_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/cmTC_707a1_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_707a1
+ld: file not found: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/__INT64_LIBZIP.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_707a1.build/Objects-normal/x86_64/__INT64_LIBZIP.o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+	Ld Debug/cmTC_707a1 normal x86_64
+(2 failures)
+
+
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing C SOURCE FILE Test HAVE_FICLONERANGE failed with the following output:
+Change Dir: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_7a840 -configuration Debug -hideShellScriptEnvironment && User defaults from command line:
+    HideShellScriptEnvironment = YES
+
+=== BUILD TARGET cmTC_7a840 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64
+write-file /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/cmTC_7a840.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/src.o src.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/include -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/DerivedSources/x86_64 -I/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/DerivedSources -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -DHAVE_FICLONERANGE -MMD -MT dependencies -MF /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/src.d --serialize-diagnostics /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/src.dia -c /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/src.c -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/src.o
+/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: 'linux/fs.h' file not found
+#include <linux/fs.h>
+         ^~~~~~~~~~~~
+1 error generated.
+
+Ld Debug/cmTC_7a840 normal x86_64
+    cd "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -L/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -F/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug -filelist /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/cmTC_7a840.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/cmTC_7a840_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/cmTC_7a840_dependency_info.dat -o /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\ Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/Debug/cmTC_7a840
+ld: file not found: /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/HatariFrameworks/libzip-1.1.3/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/src.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_7a840.build/Objects-normal/x86_64/src.o src.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+	Ld Debug/cmTC_7a840 normal x86_64
+(2 failures)
+
+
+Source file was:
+#include <sys/ioctl.h>
+#include <linux/fs.h>
+int main(int argc, char *argv[]) { unsigned long x = FICLONERANGE; }
