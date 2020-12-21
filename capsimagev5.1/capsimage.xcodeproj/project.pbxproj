@@ -1,0 +1,1465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2955D5456BEF4DADA770418D /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 130518F7CA9245EDBB7259B1 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				0904EBD1AD874ABB9A210364 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				666F18E0C14F44D09FE8A941 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		857A7C476C4B40D086DE09DB /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1B7819579FC748B08474DE93 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				CBA05FF00D5B46C5AD5A9E5C /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		CCD8F31D9F754DA1A6C25837 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 49518DAFB0E2426EA226941E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				2F3B7BD0D347463B8EE808E4 /* CMake Rules */,
+			);
+			dependencies = (
+				5B58721882904D9F9EB1A321 /* PBXTargetDependency */,
+				4497FD325D694108BDEE3AA4 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		007BA96B9EDA4ED09C077CEA /* CapsFormatMFM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34AEA1B368334333BD21F4D1 /* CapsFormatMFM.cpp */; };
+		04F9FFBDA9D142F5B1B9CF05 /* CapsLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A40BC065A240C197FEB5B5 /* CapsLoader.cpp */; };
+		092426D0F5F0438FAC54948B /* CTRawCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61D5DF5CD99E453FBEAC5884 /* CTRawCodec.cpp */; };
+		0997B8DFBA8645D0BBA3B54B /* CRC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC202FA3C1464E3DBC8E3CD6 /* CRC.cpp */; };
+		19C679FE19454E8C8AB106E1 /* BitBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23F32D4E34A44562BA1AA4B0 /* BitBuffer.cpp */; };
+		2A875D843D97470DB2BF0C6E /* CapsFDCEmulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C48C2228247E46E9AC822553 /* CapsFDCEmulator.cpp */; };
+		3FFFA200EC044CE4B6B0D23E /* CapsFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D6CBD86A9B442A7850EA861 /* CapsFile.cpp */; };
+		450ADCA655C34F3DAD42D987 /* StreamImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF2B3B6ADE3D45BFAB68F903 /* StreamImage.cpp */; };
+		4E892009259147090005DB42 /* CAPSimage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E892007259147090005DB42 /* CAPSimage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E89200F259147140005DB42 /* CAPSImg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1722D9D32A994F7FB0FE931D /* CAPSImg.cpp */; };
+		4E8920102591471C0005DB42 /* CapsAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1FC7FBB0601476E8AE80F7F /* CapsAPI.cpp */; };
+		4E8920112591471C0005DB42 /* CapsFDCEmulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C48C2228247E46E9AC822553 /* CapsFDCEmulator.cpp */; };
+		4E8920122591471C0005DB42 /* CapsFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D6CBD86A9B442A7850EA861 /* CapsFile.cpp */; };
+		4E8920132591471C0005DB42 /* CapsFormatMFM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34AEA1B368334333BD21F4D1 /* CapsFormatMFM.cpp */; };
+		4E8920142591471C0005DB42 /* CapsImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA2897A5FE2C4AA5A529CEFC /* CapsImage.cpp */; };
+		4E8920152591471C0005DB42 /* CapsImageStd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFEC5C875F74E189F2492D6 /* CapsImageStd.cpp */; };
+		4E8920162591471C0005DB42 /* CapsLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A40BC065A240C197FEB5B5 /* CapsLoader.cpp */; };
+		4E8920172591471C0005DB42 /* DiskImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 470F6D2CD85F4B9AA0BC0E23 /* DiskImage.cpp */; };
+		4E8920182591471C0005DB42 /* DiskImageFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B67606C8FF404A8DB11F74 /* DiskImageFactory.cpp */; };
+		4E8920192591471C0005DB42 /* StreamCueImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D200A591DEF476FAF4BFDA5 /* StreamCueImage.cpp */; };
+		4E89201A2591471C0005DB42 /* StreamImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF2B3B6ADE3D45BFAB68F903 /* StreamImage.cpp */; };
+		4E89201B2591471C0005DB42 /* dllmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1301A2755D449FFAB242433 /* dllmain.cpp */; };
+		4E89201C2591471C0005DB42 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA012C16A5B8408F8408E4CF /* stdafx.cpp */; };
+		4E89201D2591471C0005DB42 /* CTRawCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61D5DF5CD99E453FBEAC5884 /* CTRawCodec.cpp */; };
+		4E89201E2591471C0005DB42 /* CTRawCodecDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4A3BA0BE5FA4A238BBA33C4 /* CTRawCodecDecompressor.cpp */; };
+		4E89201F2591471C0005DB42 /* DiskEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBE04BAD06C24D909CC119D4 /* DiskEncoding.cpp */; };
+		4E8920202591471C0005DB42 /* BaseFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1CE36056857413B87C3AE4C /* BaseFile.cpp */; };
+		4E8920212591471C0005DB42 /* BitBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23F32D4E34A44562BA1AA4B0 /* BitBuffer.cpp */; };
+		4E8920222591471C0005DB42 /* CRC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC202FA3C1464E3DBC8E3CD6 /* CRC.cpp */; };
+		4E8920232591471C0005DB42 /* DiskFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD86B920983A4E8F92E78A8F /* DiskFile.cpp */; };
+		4E8920242591471C0005DB42 /* MemoryFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DF0EBADCCA49FA81390505 /* MemoryFile.cpp */; };
+		4E892025259149770005DB42 /* CapsLibVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = B735FC1F9A3A4A7795B100CE /* CapsLibVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E892026259149770005DB42 /* CapsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F68B39FC173549CCA7F14F06 /* CapsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E892027259149770005DB42 /* CapsFDCEmulator.h in Headers */ = {isa = PBXBuildFile; fileRef = A28363B3E3C348E98B97824D /* CapsFDCEmulator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E892028259149770005DB42 /* CapsFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D337E814484A1D8ED5E0A5 /* CapsFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E892029259149770005DB42 /* CapsFormatMFM.h in Headers */ = {isa = PBXBuildFile; fileRef = FD70A3EB469F4CFDBF9B8596 /* CapsFormatMFM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E89202A259149770005DB42 /* CapsImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C31E83DFA1F0441E89ED329F /* CapsImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E89202B259149770005DB42 /* CapsImageStd.h in Headers */ = {isa = PBXBuildFile; fileRef = C869E2D04DEF4B65A6CE612D /* CapsImageStd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E89202C259149770005DB42 /* CapsLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = E38F68BA94A547479CAF3570 /* CapsLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		538D89B1B7554CA19A6209A3 /* DiskEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBE04BAD06C24D909CC119D4 /* DiskEncoding.cpp */; };
+		647DD29F2C5C48F6A11D1690 /* DiskImageFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B67606C8FF404A8DB11F74 /* DiskImageFactory.cpp */; };
+		69B67AFBD5B94F9C9BBDA372 /* MemoryFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DF0EBADCCA49FA81390505 /* MemoryFile.cpp */; };
+		724334267ACF4E6FA8A81E37 /* StreamCueImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D200A591DEF476FAF4BFDA5 /* StreamCueImage.cpp */; };
+		74C8917620444F2FAEDFA719 /* CapsImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA2897A5FE2C4AA5A529CEFC /* CapsImage.cpp */; };
+		7B0C423FD59E4ECE90D73802 /* CTRawCodecDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4A3BA0BE5FA4A238BBA33C4 /* CTRawCodecDecompressor.cpp */; };
+		85D17D908C084E71B9AF9878 /* CAPSImg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1722D9D32A994F7FB0FE931D /* CAPSImg.cpp */; };
+		94931A6E2AFD48B88DFDB235 /* BaseFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1CE36056857413B87C3AE4C /* BaseFile.cpp */; };
+		A9F652AE58B74AA4951B090E /* CapsImageStd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFEC5C875F74E189F2492D6 /* CapsImageStd.cpp */; };
+		B0955CB9409C405C89FC6DA8 /* DiskImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 470F6D2CD85F4B9AA0BC0E23 /* DiskImage.cpp */; };
+		CED42802746E4C76AD68EE6E /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA012C16A5B8408F8408E4CF /* stdafx.cpp */; };
+		DEE47516CD014A14B1FD24A3 /* CapsAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1FC7FBB0601476E8AE80F7F /* CapsAPI.cpp */; };
+		DF9880D815C14794A1E22527 /* dllmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1301A2755D449FFAB242433 /* dllmain.cpp */; };
+		F24709985D8144C8AD66FA05 /* DiskFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD86B920983A4E8F92E78A8F /* DiskFile.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		641F74BEADF74B4BA4C7059E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1729608943C04B5293661ACF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCD8F31D9F754DA1A6C25837;
+			remoteInfo = ALL_BUILD;
+		};
+		7F5871CD375C47239BDCED6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1729608943C04B5293661ACF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8220567E6EB74185A81612CE;
+			remoteInfo = capsimage;
+		};
+		A9AB71C49DD64D64817B436D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1729608943C04B5293661ACF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 857A7C476C4B40D086DE09DB;
+			remoteInfo = ZERO_CHECK;
+		};
+		FDE2A409845541238ACF2DA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1729608943C04B5293661ACF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 857A7C476C4B40D086DE09DB;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0ABE335FAFBE422DBDBCF081 /* MemoryFile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MemoryFile.h; path = src/Core/MemoryFile.h; sourceTree = SOURCE_ROOT; };
+		0FC085760C0F40ADB3F6BF2D /* libcapsimage.5.1.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libcapsimage.5.1.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		10486E213EFF49539D4A8FB8 /* CapsForm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsForm.h; path = src/LibIPF/CapsForm.h; sourceTree = SOURCE_ROOT; };
+		15A40BC065A240C197FEB5B5 /* CapsLoader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CapsLoader.cpp; path = src/CAPSImg/CapsLoader.cpp; sourceTree = SOURCE_ROOT; };
+		1722D9D32A994F7FB0FE931D /* CAPSImg.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CAPSImg.cpp; path = src/CAPSImg/CAPSImg.cpp; sourceTree = SOURCE_ROOT; };
+		23CEC495D7F644918420252E /* BaseFile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = BaseFile.h; path = src/Core/BaseFile.h; sourceTree = SOURCE_ROOT; };
+		23F32D4E34A44562BA1AA4B0 /* BitBuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BitBuffer.cpp; path = src/Core/BitBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		243402BBF32F432EB417B0AC /* C2Comm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = C2Comm.h; path = src/Device/C2Comm.h; sourceTree = SOURCE_ROOT; };
+		25616CB8C9724EE89C7975C4 /* CapsLib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsLib.h; path = src/LibIPF/CapsLib.h; sourceTree = SOURCE_ROOT; };
+		25767738E9164092A721964C /* DiskImageFactory.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DiskImageFactory.h; path = src/CAPSImg/DiskImageFactory.h; sourceTree = SOURCE_ROOT; };
+		281D143B739E45D98CC4D734 /* DiskImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DiskImage.h; path = src/CAPSImg/DiskImage.h; sourceTree = SOURCE_ROOT; };
+		2D200A591DEF476FAF4BFDA5 /* StreamCueImage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = StreamCueImage.cpp; path = src/CAPSImg/StreamCueImage.cpp; sourceTree = SOURCE_ROOT; };
+		34AEA1B368334333BD21F4D1 /* CapsFormatMFM.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CapsFormatMFM.cpp; path = src/CAPSImg/CapsFormatMFM.cpp; sourceTree = SOURCE_ROOT; };
+		379A1F687671430FB63EEC30 /* DiskFile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DiskFile.h; path = src/Core/DiskFile.h; sourceTree = SOURCE_ROOT; };
+		470F6D2CD85F4B9AA0BC0E23 /* DiskImage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DiskImage.cpp; path = src/CAPSImg/DiskImage.cpp; sourceTree = SOURCE_ROOT; };
+		4D6CBD86A9B442A7850EA861 /* CapsFile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CapsFile.cpp; path = src/CAPSImg/CapsFile.cpp; sourceTree = SOURCE_ROOT; };
+		4E892005259147080005DB42 /* CAPSimage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CAPSimage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E892007259147090005DB42 /* CAPSimage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPSimage.h; sourceTree = "<group>"; };
+		4E892008259147090005DB42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54995DF63371479A9C2D35A1 /* stdafx.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stdafx.h; path = src/CAPSImg/stdafx.h; sourceTree = SOURCE_ROOT; };
+		59B67606C8FF404A8DB11F74 /* DiskImageFactory.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DiskImageFactory.cpp; path = src/CAPSImg/DiskImageFactory.cpp; sourceTree = SOURCE_ROOT; };
+		61D5DF5CD99E453FBEAC5884 /* CTRawCodec.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CTRawCodec.cpp; path = src/Codec/CTRawCodec.cpp; sourceTree = SOURCE_ROOT; };
+		6472BFE0035744BCA1A538F9 /* targetver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = targetver.h; path = src/CAPSImg/targetver.h; sourceTree = SOURCE_ROOT; };
+		6D7A6597763E4A84B2E7CB71 /* CommonTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CommonTypes.h; path = src/Core/CommonTypes.h; sourceTree = SOURCE_ROOT; };
+		6E4B6D3D5977426DACDB8780 /* ComLib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ComLib.h; path = src/LibIPF/ComLib.h; sourceTree = SOURCE_ROOT; };
+		700DF00DA31B475FBBCFCA37 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		756447FBC8DB45DA953F97EC /* CapsLibAll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsLibAll.h; path = src/LibIPF/CapsLibAll.h; sourceTree = SOURCE_ROOT; };
+		79D337E814484A1D8ED5E0A5 /* CapsFile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsFile.h; path = src/CAPSImg/CapsFile.h; sourceTree = SOURCE_ROOT; };
+		9DFEC5C875F74E189F2492D6 /* CapsImageStd.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CapsImageStd.cpp; path = src/CAPSImg/CapsImageStd.cpp; sourceTree = SOURCE_ROOT; };
+		A28363B3E3C348E98B97824D /* CapsFDCEmulator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsFDCEmulator.h; path = src/CAPSImg/CapsFDCEmulator.h; sourceTree = SOURCE_ROOT; };
+		A343D208B50048A5B1BE0741 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A3DF0EBADCCA49FA81390505 /* MemoryFile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MemoryFile.cpp; path = src/Core/MemoryFile.cpp; sourceTree = SOURCE_ROOT; };
+		A4A3BA0BE5FA4A238BBA33C4 /* CTRawCodecDecompressor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CTRawCodecDecompressor.cpp; path = src/Codec/CTRawCodecDecompressor.cpp; sourceTree = SOURCE_ROOT; };
+		A5F4B65601CF4BEFB0C6190D /* CRC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CRC.h; path = src/Core/CRC.h; sourceTree = SOURCE_ROOT; };
+		A76B960DF36B4A1294E3C1B7 /* CapsAPI.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsAPI.h; path = src/LibIPF/CapsAPI.h; sourceTree = SOURCE_ROOT; };
+		A85F6BC6C8874853B9352E0D /* StreamImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = StreamImage.h; path = src/CAPSImg/StreamImage.h; sourceTree = SOURCE_ROOT; };
+		A93332FFBA58493DB723A07F /* DiskEncoding.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DiskEncoding.h; path = src/Codec/DiskEncoding.h; sourceTree = SOURCE_ROOT; };
+		AF2B3B6ADE3D45BFAB68F903 /* StreamImage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = StreamImage.cpp; path = src/CAPSImg/StreamImage.cpp; sourceTree = SOURCE_ROOT; };
+		B1301A2755D449FFAB242433 /* dllmain.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dllmain.cpp; path = src/CAPSImg/dllmain.cpp; sourceTree = SOURCE_ROOT; };
+		B735FC1F9A3A4A7795B100CE /* CapsLibVersion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = CapsLibVersion.h; sourceTree = SOURCE_ROOT; };
+		B7647A51FBFA4C7FAFB5C902 /* StreamCueImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = StreamCueImage.h; path = src/CAPSImg/StreamCueImage.h; sourceTree = SOURCE_ROOT; };
+		BA2897A5FE2C4AA5A529CEFC /* CapsImage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CapsImage.cpp; path = src/CAPSImg/CapsImage.cpp; sourceTree = SOURCE_ROOT; };
+		C31E83DFA1F0441E89ED329F /* CapsImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsImage.h; path = src/CAPSImg/CapsImage.h; sourceTree = SOURCE_ROOT; };
+		C48C2228247E46E9AC822553 /* CapsFDCEmulator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CapsFDCEmulator.cpp; path = src/CAPSImg/CapsFDCEmulator.cpp; sourceTree = SOURCE_ROOT; };
+		C869E2D04DEF4B65A6CE612D /* CapsImageStd.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsImageStd.h; path = src/CAPSImg/CapsImageStd.h; sourceTree = SOURCE_ROOT; };
+		CBE04BAD06C24D909CC119D4 /* DiskEncoding.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DiskEncoding.cpp; path = src/Codec/DiskEncoding.cpp; sourceTree = SOURCE_ROOT; };
+		D03368CAF9344877BEAF3051 /* CapsDefinitions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsDefinitions.h; path = src/Codec/CapsDefinitions.h; sourceTree = SOURCE_ROOT; };
+		D141490A06F34C59B32303C7 /* BitBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = BitBuffer.h; path = src/Core/BitBuffer.h; sourceTree = SOURCE_ROOT; };
+		D1CE36056857413B87C3AE4C /* BaseFile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = BaseFile.cpp; path = src/Core/BaseFile.cpp; sourceTree = SOURCE_ROOT; };
+		E2194C4446584152BC1F6A97 /* CapsFDC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsFDC.h; path = src/LibIPF/CapsFDC.h; sourceTree = SOURCE_ROOT; };
+		E2370ABBAC93497EBB1EB67A /* CTRawCodec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CTRawCodec.h; path = src/Codec/CTRawCodec.h; sourceTree = SOURCE_ROOT; };
+		E38F68BA94A547479CAF3570 /* CapsLoader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsLoader.h; path = src/CAPSImg/CapsLoader.h; sourceTree = SOURCE_ROOT; };
+		EC202FA3C1464E3DBC8E3CD6 /* CRC.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CRC.cpp; path = src/Core/CRC.cpp; sourceTree = SOURCE_ROOT; };
+		F1FC7FBB0601476E8AE80F7F /* CapsAPI.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CapsAPI.cpp; path = src/CAPSImg/CapsAPI.cpp; sourceTree = SOURCE_ROOT; };
+		F68B39FC173549CCA7F14F06 /* CapsCore.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsCore.h; path = src/CAPSImg/CapsCore.h; sourceTree = SOURCE_ROOT; };
+		FA012C16A5B8408F8408E4CF /* stdafx.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stdafx.cpp; path = src/CAPSImg/stdafx.cpp; sourceTree = SOURCE_ROOT; };
+		FD70A3EB469F4CFDBF9B8596 /* CapsFormatMFM.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CapsFormatMFM.h; path = src/CAPSImg/CapsFormatMFM.h; sourceTree = SOURCE_ROOT; };
+		FD86B920983A4E8F92E78A8F /* DiskFile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DiskFile.cpp; path = src/Core/DiskFile.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E892001259147080005DB42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D920BECE6784024B5888F35 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				1722D9D32A994F7FB0FE931D /* CAPSImg.cpp */,
+				F1FC7FBB0601476E8AE80F7F /* CapsAPI.cpp */,
+				C48C2228247E46E9AC822553 /* CapsFDCEmulator.cpp */,
+				4D6CBD86A9B442A7850EA861 /* CapsFile.cpp */,
+				34AEA1B368334333BD21F4D1 /* CapsFormatMFM.cpp */,
+				BA2897A5FE2C4AA5A529CEFC /* CapsImage.cpp */,
+				9DFEC5C875F74E189F2492D6 /* CapsImageStd.cpp */,
+				15A40BC065A240C197FEB5B5 /* CapsLoader.cpp */,
+				470F6D2CD85F4B9AA0BC0E23 /* DiskImage.cpp */,
+				59B67606C8FF404A8DB11F74 /* DiskImageFactory.cpp */,
+				2D200A591DEF476FAF4BFDA5 /* StreamCueImage.cpp */,
+				AF2B3B6ADE3D45BFAB68F903 /* StreamImage.cpp */,
+				B1301A2755D449FFAB242433 /* dllmain.cpp */,
+				FA012C16A5B8408F8408E4CF /* stdafx.cpp */,
+				61D5DF5CD99E453FBEAC5884 /* CTRawCodec.cpp */,
+				A4A3BA0BE5FA4A238BBA33C4 /* CTRawCodecDecompressor.cpp */,
+				CBE04BAD06C24D909CC119D4 /* DiskEncoding.cpp */,
+				D1CE36056857413B87C3AE4C /* BaseFile.cpp */,
+				23F32D4E34A44562BA1AA4B0 /* BitBuffer.cpp */,
+				EC202FA3C1464E3DBC8E3CD6 /* CRC.cpp */,
+				FD86B920983A4E8F92E78A8F /* DiskFile.cpp */,
+				A3DF0EBADCCA49FA81390505 /* MemoryFile.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		0FED3229EEE7443F982B59AF /* capsimage */ = {
+			isa = PBXGroup;
+			children = (
+				0D920BECE6784024B5888F35 /* Source Files */,
+				C119FE2AED3E439A8AB8ECB9 /* Header Files */,
+				A343D208B50048A5B1BE0741 /* CMakeLists.txt */,
+			);
+			name = capsimage;
+			sourceTree = "<group>";
+		};
+		44954CD5C1714A30AD4D8C4C = {
+			isa = PBXGroup;
+			children = (
+				0FED3229EEE7443F982B59AF /* capsimage */,
+				E545532F6EDD4DB3A527FBEF /* ALL_BUILD */,
+				4E892006259147090005DB42 /* CAPSimage */,
+				A920A5FD85A44B658FD115B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E892006259147090005DB42 /* CAPSimage */ = {
+			isa = PBXGroup;
+			children = (
+				4E892007259147090005DB42 /* CAPSimage.h */,
+				4E892008259147090005DB42 /* Info.plist */,
+			);
+			path = CAPSimage;
+			sourceTree = "<group>";
+		};
+		A920A5FD85A44B658FD115B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FC085760C0F40ADB3F6BF2D /* libcapsimage.5.1.dylib */,
+				4E892005259147080005DB42 /* CAPSimage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C119FE2AED3E439A8AB8ECB9 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B735FC1F9A3A4A7795B100CE /* CapsLibVersion.h */,
+				F68B39FC173549CCA7F14F06 /* CapsCore.h */,
+				A28363B3E3C348E98B97824D /* CapsFDCEmulator.h */,
+				79D337E814484A1D8ED5E0A5 /* CapsFile.h */,
+				FD70A3EB469F4CFDBF9B8596 /* CapsFormatMFM.h */,
+				C31E83DFA1F0441E89ED329F /* CapsImage.h */,
+				C869E2D04DEF4B65A6CE612D /* CapsImageStd.h */,
+				E38F68BA94A547479CAF3570 /* CapsLoader.h */,
+				281D143B739E45D98CC4D734 /* DiskImage.h */,
+				25767738E9164092A721964C /* DiskImageFactory.h */,
+				B7647A51FBFA4C7FAFB5C902 /* StreamCueImage.h */,
+				A85F6BC6C8874853B9352E0D /* StreamImage.h */,
+				54995DF63371479A9C2D35A1 /* stdafx.h */,
+				6472BFE0035744BCA1A538F9 /* targetver.h */,
+				E2370ABBAC93497EBB1EB67A /* CTRawCodec.h */,
+				D03368CAF9344877BEAF3051 /* CapsDefinitions.h */,
+				A93332FFBA58493DB723A07F /* DiskEncoding.h */,
+				23CEC495D7F644918420252E /* BaseFile.h */,
+				D141490A06F34C59B32303C7 /* BitBuffer.h */,
+				A5F4B65601CF4BEFB0C6190D /* CRC.h */,
+				6D7A6597763E4A84B2E7CB71 /* CommonTypes.h */,
+				379A1F687671430FB63EEC30 /* DiskFile.h */,
+				0ABE335FAFBE422DBDBCF081 /* MemoryFile.h */,
+				243402BBF32F432EB417B0AC /* C2Comm.h */,
+				A76B960DF36B4A1294E3C1B7 /* CapsAPI.h */,
+				E2194C4446584152BC1F6A97 /* CapsFDC.h */,
+				10486E213EFF49539D4A8FB8 /* CapsForm.h */,
+				25616CB8C9724EE89C7975C4 /* CapsLib.h */,
+				756447FBC8DB45DA953F97EC /* CapsLibAll.h */,
+				6E4B6D3D5977426DACDB8780 /* ComLib.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		E545532F6EDD4DB3A527FBEF /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				F5BD7DDA47984C5F830CF796 /* CMake Rules */,
+				700DF00DA31B475FBBCFCA37 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		F5BD7DDA47984C5F830CF796 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4E892002259147080005DB42 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E892009259147090005DB42 /* CAPSimage.h in Headers */,
+				4E892025259149770005DB42 /* CapsLibVersion.h in Headers */,
+				4E892026259149770005DB42 /* CapsCore.h in Headers */,
+				4E892027259149770005DB42 /* CapsFDCEmulator.h in Headers */,
+				4E892028259149770005DB42 /* CapsFile.h in Headers */,
+				4E892029259149770005DB42 /* CapsFormatMFM.h in Headers */,
+				4E89202A259149770005DB42 /* CapsImage.h in Headers */,
+				4E89202B259149770005DB42 /* CapsImageStd.h in Headers */,
+				4E89202C259149770005DB42 /* CapsLoader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4E892004259147080005DB42 /* CAPSimage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E89200E259147090005DB42 /* Build configuration list for PBXNativeTarget "CAPSimage" */;
+			buildPhases = (
+				4E892000259147080005DB42 /* Sources */,
+				4E892001259147080005DB42 /* Frameworks */,
+				4E892002259147080005DB42 /* Headers */,
+				4E892003259147080005DB42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CAPSimage;
+			productName = CAPSimage;
+			productReference = 4E892005259147080005DB42 /* CAPSimage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8220567E6EB74185A81612CE /* capsimage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABEBDDC63876449DB5DDDDC3 /* Build configuration list for PBXNativeTarget "capsimage" */;
+			buildPhases = (
+				EB734D656C474A5D8D95C7DB /* Sources */,
+				69708DC50DD245EE8762A4B6 /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4C4145F1324455A8D76DBAF /* PBXTargetDependency */,
+			);
+			name = capsimage;
+			productName = capsimage;
+			productReference = 0FC085760C0F40ADB3F6BF2D /* libcapsimage.5.1.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1729608943C04B5293661ACF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					4E892004259147080005DB42 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FE46159EBF144DA2A3BF25FE /* Build configuration list for PBXProject "capsimage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 44954CD5C1714A30AD4D8C4C;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCD8F31D9F754DA1A6C25837 /* ALL_BUILD */,
+				857A7C476C4B40D086DE09DB /* ZERO_CHECK */,
+				8220567E6EB74185A81612CE /* capsimage */,
+				2955D5456BEF4DADA770418D /* install */,
+				4E892004259147080005DB42 /* CAPSimage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E892003259147080005DB42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0904EBD1AD874ABB9A210364 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\\ Frameworks/Sources/capsimagev5.1 -f /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\\ Frameworks/Sources/capsimagev5.1/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		2F3B7BD0D347463B8EE808E4 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\\ Frameworks/Sources/capsimagev5.1 -f /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\\ Frameworks/Sources/capsimagev5.1/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		69708DC50DD245EE8762A4B6 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\\ Frameworks/Sources/capsimagev5.1 -f /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\\ Frameworks/Sources/capsimagev5.1/CMakeScripts/capsimage_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		CBA05FF00D5B46C5AD5A9E5C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\\ Frameworks/Sources/capsimagev5.1 -f /Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari\\ Frameworks/Sources/capsimagev5.1/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E892000259147080005DB42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E89201E2591471C0005DB42 /* CTRawCodecDecompressor.cpp in Sources */,
+				4E8920192591471C0005DB42 /* StreamCueImage.cpp in Sources */,
+				4E8920132591471C0005DB42 /* CapsFormatMFM.cpp in Sources */,
+				4E8920122591471C0005DB42 /* CapsFile.cpp in Sources */,
+				4E8920152591471C0005DB42 /* CapsImageStd.cpp in Sources */,
+				4E8920112591471C0005DB42 /* CapsFDCEmulator.cpp in Sources */,
+				4E8920202591471C0005DB42 /* BaseFile.cpp in Sources */,
+				4E89201C2591471C0005DB42 /* stdafx.cpp in Sources */,
+				4E89200F259147140005DB42 /* CAPSImg.cpp in Sources */,
+				4E89201D2591471C0005DB42 /* CTRawCodec.cpp in Sources */,
+				4E8920162591471C0005DB42 /* CapsLoader.cpp in Sources */,
+				4E89201F2591471C0005DB42 /* DiskEncoding.cpp in Sources */,
+				4E8920172591471C0005DB42 /* DiskImage.cpp in Sources */,
+				4E8920182591471C0005DB42 /* DiskImageFactory.cpp in Sources */,
+				4E8920142591471C0005DB42 /* CapsImage.cpp in Sources */,
+				4E8920212591471C0005DB42 /* BitBuffer.cpp in Sources */,
+				4E8920222591471C0005DB42 /* CRC.cpp in Sources */,
+				4E8920232591471C0005DB42 /* DiskFile.cpp in Sources */,
+				4E8920242591471C0005DB42 /* MemoryFile.cpp in Sources */,
+				4E8920102591471C0005DB42 /* CapsAPI.cpp in Sources */,
+				4E89201B2591471C0005DB42 /* dllmain.cpp in Sources */,
+				4E89201A2591471C0005DB42 /* StreamImage.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB734D656C474A5D8D95C7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D17D908C084E71B9AF9878 /* CAPSImg.cpp in Sources */,
+				DEE47516CD014A14B1FD24A3 /* CapsAPI.cpp in Sources */,
+				2A875D843D97470DB2BF0C6E /* CapsFDCEmulator.cpp in Sources */,
+				3FFFA200EC044CE4B6B0D23E /* CapsFile.cpp in Sources */,
+				007BA96B9EDA4ED09C077CEA /* CapsFormatMFM.cpp in Sources */,
+				74C8917620444F2FAEDFA719 /* CapsImage.cpp in Sources */,
+				A9F652AE58B74AA4951B090E /* CapsImageStd.cpp in Sources */,
+				04F9FFBDA9D142F5B1B9CF05 /* CapsLoader.cpp in Sources */,
+				B0955CB9409C405C89FC6DA8 /* DiskImage.cpp in Sources */,
+				647DD29F2C5C48F6A11D1690 /* DiskImageFactory.cpp in Sources */,
+				724334267ACF4E6FA8A81E37 /* StreamCueImage.cpp in Sources */,
+				450ADCA655C34F3DAD42D987 /* StreamImage.cpp in Sources */,
+				DF9880D815C14794A1E22527 /* dllmain.cpp in Sources */,
+				CED42802746E4C76AD68EE6E /* stdafx.cpp in Sources */,
+				092426D0F5F0438FAC54948B /* CTRawCodec.cpp in Sources */,
+				7B0C423FD59E4ECE90D73802 /* CTRawCodecDecompressor.cpp in Sources */,
+				538D89B1B7554CA19A6209A3 /* DiskEncoding.cpp in Sources */,
+				94931A6E2AFD48B88DFDB235 /* BaseFile.cpp in Sources */,
+				19C679FE19454E8C8AB106E1 /* BitBuffer.cpp in Sources */,
+				0997B8DFBA8645D0BBA3B54B /* CRC.cpp in Sources */,
+				F24709985D8144C8AD66FA05 /* DiskFile.cpp in Sources */,
+				69B67AFBD5B94F9C9BBDA372 /* MemoryFile.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4497FD325D694108BDEE3AA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 857A7C476C4B40D086DE09DB /* ZERO_CHECK */;
+			targetProxy = A9AB71C49DD64D64817B436D /* PBXContainerItemProxy */;
+		};
+		5B58721882904D9F9EB1A321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8220567E6EB74185A81612CE /* capsimage */;
+			targetProxy = 7F5871CD375C47239BDCED6A /* PBXContainerItemProxy */;
+		};
+		666F18E0C14F44D09FE8A941 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCD8F31D9F754DA1A6C25837 /* ALL_BUILD */;
+			targetProxy = 641F74BEADF74B4BA4C7059E /* PBXContainerItemProxy */;
+		};
+		D4C4145F1324455A8D76DBAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 857A7C476C4B40D086DE09DB /* ZERO_CHECK */;
+			targetProxy = FDE2A409845541238ACF2DA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1885FAF66C7E4D6984E09CC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				SDKROOT = macosx;
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/build";
+			};
+			name = Release;
+		};
+		4E89200A259147090005DB42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 5.0.0;
+				DYLIB_CURRENT_VERSION = 5.1.0;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"'HAVE_CONFIG_H=1'",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/LibIPF\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Core\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Codec\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Device\"",
+				);
+				INFOPLIST_FILE = CAPSimage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = bxo.CAPSimage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx10.13;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4E89200B259147090005DB42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 5.0.0;
+				DYLIB_CURRENT_VERSION = 5.1.0;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'HAVE_CONFIG_H=1'",
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					capsimage_EXPORTS,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/LibIPF\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Core\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Codec\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Device\"",
+				);
+				INFOPLIST_FILE = CAPSimage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = bxo.CAPSimage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx10.13;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E89200C259147090005DB42 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 5.0.0;
+				DYLIB_CURRENT_VERSION = 5.1.0;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/LibIPF\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Core\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Codec\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Device\"",
+				);
+				INFOPLIST_FILE = CAPSimage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = bxo.CAPSimage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx10.13;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = MinSizeRel;
+		};
+		4E89200D259147090005DB42 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 5.0.0;
+				DYLIB_CURRENT_VERSION = 5.1.0;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/LibIPF\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Core\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Codec\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Device\"",
+				);
+				INFOPLIST_FILE = CAPSimage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = bxo.CAPSimage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx10.13;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = RelWithDebInfo;
+		};
+		4FB5C359F1FB4EF8BFAA05EA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 5.0.0;
+				DYLIB_CURRENT_VERSION = 5.1.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					capsimage_EXPORTS,
+					"'HAVE_CONFIG_H=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/LibIPF\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Core\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Codec\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Device\"",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"'-std=gnu++11'",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-install_name",
+					"@rpath/libcapsimage.5.dylib",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = capsimage.5.1;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		50A653ED14C14FE3B375FC24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				SDKROOT = macosx;
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/build";
+			};
+			name = Debug;
+		};
+		5928D66E6EDC41E6BD1FEFD5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		64E86D61AA254272A605D396 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		669EB46E772E493582613D07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		9127CF7F48304B409AABBF1A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		9785F95208A047E9B27AFDFD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		9C6E2745CF504E879A6717C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 5.0.0;
+				DYLIB_CURRENT_VERSION = 5.1.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					capsimage_EXPORTS,
+					"'HAVE_CONFIG_H=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/LibIPF\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Core\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Codec\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Device\"",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fPIC",
+					"'-std=gnu++11'",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-install_name",
+					"@rpath/libcapsimage.5.dylib",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = capsimage.5.1;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		A4F2F7358E62482785CD8989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		A5C7AECFB7E1491480F99A16 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		BED11AC54BA94E1CAF0E2A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		C4394CCE8A0E440FA81F1ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 5.0.0;
+				DYLIB_CURRENT_VERSION = 5.1.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					capsimage_EXPORTS,
+					"'HAVE_CONFIG_H=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/LibIPF\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Core\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Codec\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Device\"",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"'-std=gnu++11'",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-install_name",
+					"@rpath/libcapsimage.5.dylib",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = capsimage.5.1;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		C7BD85B25654444D81F2F448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		C81845DCF7E640C0B63E324E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				SDKROOT = macosx;
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/build";
+			};
+			name = MinSizeRel;
+		};
+		C9908BC780C74320B21CC11A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		D31AAF5C31BA4385A0650F58 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 5.0.0;
+				DYLIB_CURRENT_VERSION = 5.1.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					capsimage_EXPORTS,
+					"'HAVE_CONFIG_H=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/LibIPF\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Core\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Codec\"",
+					"\"/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/Device\"",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"'-std=gnu++11'",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-install_name",
+					"@rpath/libcapsimage.5.dylib",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = capsimage.5.1;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		E60660BCCA644376A4C85438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		E7E4EFCDA6CF4A26AB16FE5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		E999FB318E5A437A95A6D2DC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				SDKROOT = macosx;
+				SYMROOT = "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/build";
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		130518F7CA9245EDBB7259B1 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BED11AC54BA94E1CAF0E2A0C /* Debug */,
+				E60660BCCA644376A4C85438 /* Release */,
+				64E86D61AA254272A605D396 /* MinSizeRel */,
+				5928D66E6EDC41E6BD1FEFD5 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1B7819579FC748B08474DE93 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7BD85B25654444D81F2F448 /* Debug */,
+				A4F2F7358E62482785CD8989 /* Release */,
+				A5C7AECFB7E1491480F99A16 /* MinSizeRel */,
+				C9908BC780C74320B21CC11A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		49518DAFB0E2426EA226941E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7E4EFCDA6CF4A26AB16FE5B /* Debug */,
+				669EB46E772E493582613D07 /* Release */,
+				9127CF7F48304B409AABBF1A /* MinSizeRel */,
+				9785F95208A047E9B27AFDFD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4E89200E259147090005DB42 /* Build configuration list for PBXNativeTarget "CAPSimage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E89200A259147090005DB42 /* Debug */,
+				4E89200B259147090005DB42 /* Release */,
+				4E89200C259147090005DB42 /* MinSizeRel */,
+				4E89200D259147090005DB42 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		ABEBDDC63876449DB5DDDDC3 /* Build configuration list for PBXNativeTarget "capsimage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6E2745CF504E879A6717C8 /* Debug */,
+				C4394CCE8A0E440FA81F1ADB /* Release */,
+				D31AAF5C31BA4385A0650F58 /* MinSizeRel */,
+				4FB5C359F1FB4EF8BFAA05EA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FE46159EBF144DA2A3BF25FE /* Build configuration list for PBXProject "capsimage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50A653ED14C14FE3B375FC24 /* Debug */,
+				1885FAF66C7E4D6984E09CC2 /* Release */,
+				C81845DCF7E640C0B63E324E /* MinSizeRel */,
+				E999FB318E5A437A95A6D2DC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1729608943C04B5293661ACF /* Project object */;
+}

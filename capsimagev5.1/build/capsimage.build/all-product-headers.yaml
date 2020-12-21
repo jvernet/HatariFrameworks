@@ -1,0 +1,73 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/build/Release/CAPSimage.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CAPSimage-Swift.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/build/Release/CAPSimage.framework/Versions/A/Headers/CAPSimage-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "CAPSimage.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/CAPSimage/CAPSimage.h"
+        },
+        {
+          'type': 'file',
+          'name': "CapsCore.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg/CapsCore.h"
+        },
+        {
+          'type': 'file',
+          'name': "CapsFDCEmulator.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg/CapsFDCEmulator.h"
+        },
+        {
+          'type': 'file',
+          'name': "CapsFile.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg/CapsFile.h"
+        },
+        {
+          'type': 'file',
+          'name': "CapsFormatMFM.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg/CapsFormatMFM.h"
+        },
+        {
+          'type': 'file',
+          'name': "CapsImage.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg/CapsImage.h"
+        },
+        {
+          'type': 'file',
+          'name': "CapsImageStd.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg/CapsImageStd.h"
+        },
+        {
+          'type': 'file',
+          'name': "CapsLibVersion.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/CapsLibVersion.h"
+        },
+        {
+          'type': 'file',
+          'name': "CapsLoader.h",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/src/CAPSImg/CapsLoader.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/build/Release/CAPSimage.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jeromevernet/Documents/dev/HATARIFrameworks/Hatari Frameworks/Sources/capsimagev5.1/build/capsimage.build/Release/CAPSimage.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+framework module CAPSimage {
+  umbrella header "CAPSimage.h"
+
+  export *
+  module * { export * }
+}
